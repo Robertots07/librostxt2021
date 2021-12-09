@@ -1,0 +1,23 @@
+$introBg: "http://mdbootstrap.com/img/Photos/Others/forest1.jpg";
+
+.intro-2 {
+    background: url($introBg) no-repeat center center;
+    background-size: cover;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+.md-form label {
+    color: #ffffff;
+}
+
+.intro {
+    min-height: 100vh;
+    position: relative;
+}
+
+.rgba-stylish-strong .mask {
+    background-color: rgba(62, 69, 81, .7);
+}

@@ -1,0 +1,168 @@
+<div class="row mt-5">
+    <div class="col-md-4">
+        <!--Card-->
+        <mdb-card cascade="true" narrower="true" class="mt-5">
+
+            <!--Card image-->
+            <div class="view view-cascade gradient-card-header blue-gradient">
+                <h4 class="h4-responsive">Line chart</h4>
+            </div>
+            <!--/Card image-->
+
+            <!--Card content-->
+            <mdb-card-body cascade="true" class="text-center">
+
+                <div style="display: block">
+                    <canvas mdbChart
+                            [chartType]="chart1Type"
+                            [datasets]="chart1Datasets"
+                            [labels]="chart1Labels"
+                            [colors]="chart1Colors"
+                            [options]="chartOptions"
+                            [legend]="true">
+                    </canvas>
+                </div>
+
+
+            </mdb-card-body>
+            <!--/.Card content-->
+
+        </mdb-card>
+        <!--/.Card-->
+    </div>
+    <div class="col-md-4">
+        <!--Card-->
+        <mdb-card cascade="true" narrower="true" class="mt-5">
+
+            <!--Card image-->
+            <div class="view view-cascade gradient-card-header blue-gradient">
+                <h4 class="h4-responsive">Radar chart</h4>
+            </div>
+            <!--/Card image-->
+
+            <!--Card content-->
+            <mdb-card-body cascade="true" class="text-center">
+
+
+                <div style="display: block">
+                    <canvas mdbChart
+                            width="422"
+                            height="211"
+                            [chartType]="chart2Type"
+                            [datasets]="chart2Datasets"
+                            [labels]="chart2Labels"
+                            [colors]="chart2Colors"
+                            [options]="chartOptions"
+                            [legend]="true">
+                    </canvas>
+                </div>
+            </mdb-card-body>
+            <!--/.Card content-->
+        </mdb-card>
+        <!--/.Card-->
+    </div>
+    <div class="col-md-4">
+        <!--Card-->
+        <mdb-card cascade="true" narrower="true" class="mt-5">
+            <!--Card image-->
+            <div class="view view-cascade gradient-card-header blue-gradient">
+                <h4 class="h4-responsive">Bar chart</h4>
+            </div>
+            <!--/Card image-->
+            <!--Card content-->
+            <mdb-card-body cascade="true" class="text-center">
+                <div style="display: block">
+                    <canvas mdbChart
+                            [chartType]="chart3Type"
+                            [datasets]="chart3Datasets"
+                            [labels]="chart3Labels"
+                            [colors]="chart3Colors"
+                            [options]="chartOptions"
+                            [legend]="true">
+                    </canvas>
+                </div>
+            </mdb-card-body>
+            <!--/.Card content-->
+        </mdb-card>
+        <!--/.Card-->
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-4">
+        <!--Card-->
+        <mdb-card cascade="true" narrower="true" class="mt-5">
+            <!--Card image-->
+            <div class="view view-cascade gradient-card-header blue-gradient">
+                <h4 class="h4-responsive">Polar Area chart</h4>
+            </div>
+            <!--/Card image-->
+            <!--Card content-->
+            <mdb-card-body cascade="true" class="text-center">
+                <div style="display: block">
+                    <canvas mdbChart
+                            [chartType]="chart4Type"
+                            [data]="chart4Datasets"
+                            [labels]="chart4Labels"
+                            [colors]="chart4Colors"
+                            [options]="chartOptions"
+                            [legend]="true">
+                    </canvas>
+                </div>
+
+            </mdb-card-body>
+            <!--/.Card content-->
+        </mdb-card>
+        <!--/.Card-->
+    </div>
+    <div class="col-md-4">
+        <!--Card-->
+        <mdb-card cascade="true" narrower="true" class="mt-5">
+            <!--Card image-->
+            <div class="view view-cascade gradient-card-header blue-gradient">
+                <h4 class="h4-responsive">Pie chart</h4>
+            </div>
+            <!--/Card image-->
+            <!--Card content-->
+            <mdb-card-body cascade="true" class="text-center">
+                <div style="display: block">
+                    <canvas mdbChart
+                            [chartType]="chart5Type"
+                            [datasets]="chart5Datasets"
+                            [labels]="chart5Labels"
+                            [colors]="chart5Colors"
+                            [options]="chartOptions"
+                            [legend]="true">
+                    </canvas>
+                </div>
+            </mdb-card-body>
+            <!--/.Card content-->
+        </mdb-card>
+        <!--/.Card-->
+    </div>
+    <div class="col-md-4">
+        <!--Card-->
+        <mdb-card cascade="true" narrower="true" class="mt-5">
+            <!--Card image-->
+            <div class="view view-cascade gradient-card-header blue-gradient">
+                <h4 class="h4-responsive">Bar chart</h4>
+            </div>
+            <!--/Card image-->
+            <!--Card content-->
+            <mdb-card-body cascade="true" class="text-center">
+                <div style="display: block">
+                    <canvas mdbChart
+                            [chartType]="chart6Type"
+                            [datasets]="chart6Datasets"
+                            [labels]="chart6Labels"
+                            [colors]="chart6Colors"
+                            [options]="chartOptions"
+                            [legend]="true">
+                    </canvas>
+                </div>
+            </mdb-card-body>
+            <!--/.Card content-->
+        </mdb-card>
+        <!--/.Card-->
+    </div>
+</div>

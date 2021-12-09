@@ -1,0 +1,60 @@
+<app-header></app-header>
+<section>
+    <mdb-carousel class="carousel slide carousel-fade" [animation]="''">
+        <mdb-carousel-item>
+            <div class="view w-100">
+                <img class="d-block w-100" src="http://librosdetexto.sep.gob.mx/img/uno.png">
+                <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
+            </div>
+            <div class="carousel-caption">
+                <img class="mx-auto d-block" width="280px" src="../../assets/img/sep_edu.svg">
+                <h1 class="h1-responsive">Libros de Texto Gratuitos</h1>
+                <p>Ciclo Escolar 2021-2022</p>
+            </div>
+        </mdb-carousel-item>
+    </mdb-carousel>
+</section>
+
+<div class="container">
+    <!-- Section heading -->
+    <h2 class="h1-responsive font-weight-bold text-center my-5">Acervo de materiales educativos</h2>
+    <h3 class="h3-responsive font-weight-bold text-justify my-5">Bienvenidas y bienvenidos.</h3>
+    <!-- Section description -->
+    <p class="text-justify  mx-auto mb-5">Aquí encontrarán en versión digital, los materiales educativos impresos elaborados por la Secretaría de Educación Pública para alumnos, maestros y padres de familia de educación preescolar, primaria y telesecundaria, con el propósito de cumplir con
+        el anhelo compartido de que en el país se ofrezca una educación con equidad y calidad, en la que todos los alumnos aprendan, sin importar su origen, su condición personal, económica o social, y en la que se promueva una formación centrada en la
+        dignidad humana, la solidaridad, el amor a la patria, el respeto y cuidado de la salud, así como la preservación del medio ambiente.</p>
+    <h4 class="h4-responsive text-center my-5"><em>Los libros son grandes compañeros de viaje en la vida.</em></h4>
+    <p class="h5-responsive text-justify  mx-auto mb-5">Selecciona el nivel educativo de tu interés y con ello tendrás acceso a la versión digital de los Libros de Texto Gratuitos.</p>
+
+    <div class="row  mb-5">
+        <div class="col-lg-4">
+            <!-- Featured image -->
+            <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4 waves-light" mdbWavesEffect>
+                <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/img%20(27).jpg" alt="Sample image">
+                <a [routerLink]="['/libros']">
+                    <div class="mask rgba-white-slight"></div>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <!-- Featured image -->
+            <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4 waves-light" mdbWavesEffect>
+                <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/img%20(27).jpg" alt="Sample image">
+                <a [routerLink]="['/side']">
+                    <div class="mask rgba-white-slight"></div>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <!-- Featured image -->
+            <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4 waves-light" mdbWavesEffect>
+                <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/img%20(27).jpg" alt="Sample image">
+                <a>
+                    <div class="mask rgba-white-slight"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

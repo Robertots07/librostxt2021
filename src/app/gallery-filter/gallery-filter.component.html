@@ -1,0 +1,50 @@
+<mdb-filter>
+    <div class="filter-nav d-flex flex-center mb-4">
+        <button mdbBtn color="success" class="active" [mdbFilter]="''">All</button>
+        <button mdbBtn color="primary" [mdbFilter]="'nature'">Nature</button>
+        <button mdbBtn color="primary" [mdbFilter]="'food'">Food</button>
+        <button mdbBtn color="primary" [mdbFilter]="'architecture'">Architecture</button>
+    </div>
+
+    <mdb-filter-content>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 my-1 mb-3" mdbFilter *ngFor="let item of galleryItems">
+                    <mdb-filter-item class="item" [mdbFilterItem]="item.tag" [animationClass]="['animated', 'zoomIn', 'faster']">
+
+                        <!--Card-->
+                        <mdb-card cascade="true" wider="true">
+
+                            <!--Card image-->
+                            <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+                                <mdb-card-img [src]="item.imgSrc"></mdb-card-img>
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <!--/Card image-->
+
+                            <mdb-card-body cascade="true" class="text-center pb-0" style="border-radius: 0 0 3.25rem 0.25rem!important;">
+                                <!--Card content-->
+                                <mdb-card-text>
+
+                                    <button mdbBtn type="button" color="info" outline="true" mdbWavesEffect>Ver</button>
+                                    <button mdbBtn type="button" color="default" size="lg" mdbWavesEffect>Descargar</button>
+
+                                </mdb-card-text>
+
+
+                            </mdb-card-body>
+                            <!--/.Card content-->
+
+
+
+
+                        </mdb-card>
+                        <!--/.Card-->
+                    </mdb-filter-item>
+                </div>
+            </div>
+        </div>
+    </mdb-filter-content>
+</mdb-filter>

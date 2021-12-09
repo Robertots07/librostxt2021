@@ -1,0 +1,254 @@
+<section class="my-5">
+
+    <!--Card-->
+    <mdb-card cascade="true" class="narrower">
+
+        <!--Section: Chart-->
+        <section>
+
+            <!--Grid row-->
+            <div class="row">
+
+                <!--Grid column-->
+                <div class="col mr-0">
+
+                    <!--Card image-->
+                    <div class="view view-cascade gradient-card-header light-blue lighten-1 text-white">
+                        <h2 class="h2-responsive mb-0">Traffic</h2>
+                    </div>
+                    <!--/Card image-->
+
+                    <!--Card content-->
+                    <mdb-card-body cascade="true" class="pb-0">
+
+                        <!--Panel data-->
+                        <mdb-card-body class="row pt-3">
+
+                            <!--First column-->
+                            <div class="col">
+
+                                <!--Date select-->
+                                <p class="lead"><mdb-badge info="true" class="p-2">Data range</mdb-badge></p>
+                                <mdb-select [options]="dateOptionsSelect" placeholder="Choose time period"></mdb-select>
+
+                                <!--Date pickers-->
+                                <p class="lead mt-5"><mdb-badge info="true" class="p-2">Custom date</mdb-badge></p>
+                                <br>
+                                <div class="d-flex justify-content-between">
+	                                <div class="md-form">
+	                                    <mdb-date-picker name="mydate" [placeholder]="'Selected date'"  required></mdb-date-picker>
+	                                    <label class="active">From</label>
+	                                </div>
+	                                <div class="md-form">
+	                                    <mdb-date-picker name="mydate" [placeholder]="'Selected date'"  required></mdb-date-picker>
+	                                    <label class="active">To</label>
+	                                </div>
+                                </div>
+
+                            </div>
+                            <!--/First column-->
+
+                        </mdb-card-body>
+                        <!--/Panel data-->
+
+                    </mdb-card-body>
+                    <!--/.Card content-->
+
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-xl-7 col-lg-12 my-5">
+
+                    <!--Card image-->
+                    <div class="view view-cascade gradient-card-header blue-gradient">
+
+                        <!-- Chart -->
+			            <canvas mdbChart 
+			                [chartType]="chart1Type"
+			                [datasets]="chart1Datasets" 
+			                [labels]="chart1Labels"
+			                [colors]="chart1Colors"
+			                [options]="chart1Options"
+			                [legend]="true">
+			            </canvas>
+
+                    </div>
+                    <!--/Card image-->
+
+                </div>
+                <!--Grid column-->
+
+            </div>
+            <!--Grid row-->
+
+        </section>
+        <!--Section: Chart-->
+
+    </mdb-card>
+    <!--/.Card-->
+
+</section>
+
+<section class="section">
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="my-5">
+                <cascading-card title="Visits by Browser">
+                    <mdb-card-body>
+
+                        <canvas mdbChart 
+                            [chartType]="chart2Type"
+                            [data]="chart2Datasets" 
+                            [labels]="chart2Labels"
+                            [options]="chart2Options"
+                            [legend]="true"
+                            [colors]="chart2Colors">
+                        </canvas>
+
+                    </mdb-card-body>
+                </cascading-card>
+            </div>
+            <div class="my-5">
+                <cascading-card alignment="left">
+                    <mdb-card-body>
+                        <div class="table-responsive">
+                            <table class="table large-header">
+                                <thead>
+                                    <tr>
+                                        <th>Keywords</th>
+                                        <th>Visits</th>
+                                        <th>Pages</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Material Design</td>
+                                        <td>23415</td>
+                                        <td>2307</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bootstrap</td>
+                                        <td>45432</td>
+                                        <td>34504</td>
+                                    </tr>
+                                    <tr>
+                                        <td>MDBootstrap</td>
+                                        <td>23441</td>
+                                        <td>3613</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Frontend</td>
+                                        <td>23414</td>
+                                        <td>3208</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <button mdbBtn flat="true" rounded="true" class="grey lighten-2 waves-effect float-right dark-grey-text" mdbWavesEffect>full report</button>
+
+                    </mdb-card-body>
+                </cascading-card>
+            </div>
+
+        </div>
+
+        <div class="col-md-8">
+            <div class="my-5">
+                <cascading-card alignment="left">
+                    <mdb-card-body>
+                        <table class="table large-header">
+                            <thead>
+                                <tr>
+                                    <th>Country</th>
+                                    <th>Visits</th>
+                                    <th>Pages</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><img src="assets/img/flags/us.png" class="flag"> United States</td>
+                                    <td>27315</td>
+                                    <td>3307</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="assets/img/flags/in.png" class="flag"> India</td>
+                                    <td>55432</td>
+                                    <td>3504</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="assets/img/flags/cn.png" class="flag"> China</td>
+                                    <td>44341</td>
+                                    <td>4613</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="assets/img/flags/pl.png" class="flag"> Poland</td>
+                                    <td>14514</td>
+                                    <td>3208</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="assets/img/flags/it.png" class="flag"> Italy</td>
+                                    <td>2424</td>
+                                    <td>1414</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <button mdbBtn flat="true" rounded="true" class="grey lighten-2 waves-effect float-right dark-grey-text" mdbWavesEffect>full report</button>
+
+                    </mdb-card-body>
+                </cascading-card>
+            </div>
+
+            <div class="my-5">
+                <cascading-card alignment="left">
+                    <mdb-card-body>
+                        <table class="table large-header">
+                            <thead>
+                                <tr>
+                                    <th>Browser</th>
+                                    <th>Visits</th>
+                                    <th>Pages</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Google Chrome</td>
+                                    <td>53415</td>
+                                    <td>3307</td>
+                                </tr>
+                                <tr>
+                                    <td>Mozilla Firefox</td>
+                                    <td>23332</td>
+                                    <td>2504</td>
+                                </tr>
+                                <tr>
+                                    <td>Safari</td>
+                                    <td>13141</td>
+                                    <td>3613</td>
+                                </tr>
+                                <tr>
+                                    <td>Opera</td>
+                                    <td>1114</td>
+                                    <td>208</td>
+                                </tr>
+                                <tr>
+                                    <td>Microsoft Edge</td>
+                                    <td>124</td>
+                                    <td>14</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <button mdbBtn flat="true" rounded="true" class="grey lighten-2 waves-effect float-right dark-grey-text" mdbWavesEffect>full report</button>
+
+                    </mdb-card-body>
+                </cascading-card>
+            </div>
+
+        </div>
+    </div>
+
+</section>

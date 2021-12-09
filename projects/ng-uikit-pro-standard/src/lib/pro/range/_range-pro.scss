@@ -1,0 +1,147 @@
+@import 'mixins-pro';
+
+.range-field {
+  @include range;
+}
+
+@supports (--css: variables) {
+  input[type='range'].mdbMultiRange {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    pointer-events: none;
+
+    &::-moz-range-thumb {
+      pointer-events: all;
+    }
+
+    &::-webkit-slider-thumb {
+      pointer-events: all;
+    }
+
+    &.original {
+      position: absolute;
+
+      &::-webkit-slider-thumb {
+        position: relative;
+        z-index: 2;
+      }
+
+      &::-moz-range-thumb {
+        transform: scale(1);
+        z-index: 1;
+      }
+    }
+
+    &.ghost {
+      position: relative;
+
+      &::-moz-range-track {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.multi-range-field {
+  @include range;
+}
+
+.thumb-horizontal-wrapper {
+  position: relative;
+  transform: rotate(-270deg);
+  top: 500px;
+}
+
+.multi-range-field input[type='range'] + .thumb-horizontal .value {
+  transform: rotate(315deg) !important;
+}
+
+.range-field {
+  &:focus {
+    box-shadow: none;
+
+    // Pseudo-elements must be split across multiple rulesets to have an effect.
+    // No box-shadow() mixin for focus accessibility.
+    &::-webkit-slider-thumb {
+      box-shadow: none;
+    }
+    &::-moz-range-thumb {
+      box-shadow: none;
+    }
+    &::-ms-thumb {
+      box-shadow: none;
+    }
+  }
+
+  &::-moz-focus-outer {
+    border: 0;
+  }
+
+  &::-webkit-slider-thumb {
+    margin-top: -6px; // Webkit specific
+    box-shadow: none;
+    appearance: none;
+  }
+
+  &::-webkit-slider-runnable-track {
+    height: 4px;
+    border-radius: 0;
+  }
+
+  &::-moz-range-thumb {
+    box-shadow: none;
+    appearance: none;
+  }
+}
+
+// Angular styles
+.range-field {
+  position: relative;
+
+  .track {
+    position: absolute;
+
+    .range-cloud {
+      position: absolute;
+      display: block;
+      height: 30px;
+      width: 30px;
+      top: -32px;
+      margin-left: -15px;
+      text-align: center;
+      border-radius: 50% 50% 50% 0;
+      transform: scale(0);
+      transform-origin: bottom;
+      transition: transform 0.2s ease-in-out;
+
+      &:after {
+        position: absolute;
+        display: block;
+        content: '';
+        transform: translateX(-50%);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        border-radius: 50% 50% 50% 0;
+        transform: rotate(-45deg);
+        background: #1266f1;
+        z-index: -1;
+      }
+
+      &.visible {
+        transform: scale(1);
+      }
+
+      .text-transform {
+        display: block;
+        font-size: 12px;
+        line-height: 30px;
+        color: rgb(255, 255, 255);
+        z-index: 2;
+      }
+    }
+  }
+}

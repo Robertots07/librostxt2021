@@ -1,0 +1,248 @@
+<div class="row">
+    <!--Grid column-->
+    <div class="col-lg-4 col-md-12">
+        <!--Card-->
+        <mdb-card cascade="true" narrower="true">
+            <!--Card image-->
+            <div class="view view-cascade gradient-card-header blue-gradient">
+                <h4 class="h4-responsive">Date picker</h4>
+            </div>
+            <!--/Card image-->
+            <!--Card content-->
+            <mdb-card-body cascade="true">
+                <mdb-date-picker #datePicker name="mydate" [placeholder]="'Selected date'" required></mdb-date-picker>
+            </mdb-card-body>
+            <!--/.Card content-->
+        </mdb-card>
+        <!--/.Card-->
+    </div>
+    <!--Grid column-->
+    <!--Grid column-->
+    <div class="col-lg-4 col-md-12">
+        <!--Card-->
+        <mdb-card cascade="true" narrower="true">
+            <!--Card image-->
+            <div class="view view-cascade gradient-card-header blue-gradient">
+                <h4 class="h4-responsive">Time picker light</h4>
+            </div>
+            <!--/Card image-->
+            <!--Card content-->
+            <mdb-card-body cascade="true">
+                <mdb-time-picker [twelvehour]="true" [darktheme]="false" [placeholder]="'Selected time'"
+                                 [label]="'Light version, 12hours'" [showClock]="false"></mdb-time-picker>
+            </mdb-card-body>
+            <!--/.Card content-->
+        </mdb-card>
+        <!--/.Card-->
+    </div>
+    <!--Grid column-->
+    <!--Grid column-->
+    <div class="col-lg-4 col-md-12">
+        <!--Card-->
+        <mdb-card cascade="true" narrower="true">
+            <!--Card image-->
+            <div class="view view-cascade gradient-card-header blue-gradient">
+                <h4 class="h4-responsive">Time picker dark</h4>
+            </div>
+            <!--/Card image-->
+            <!--Card content-->
+            <mdb-card-body cascade="true">
+                <mdb-time-picker #darkPicker [twelvehour]="false" [darktheme]="true" [placeholder]="'Selected time'"
+                                 [label]="'Dark version, 24hours'"></mdb-time-picker>
+            </mdb-card-body>
+            <!--/.Card content-->
+        </mdb-card>
+        <!--/.Card-->
+    </div>
+    <!--Grid column-->
+</div>
+
+<div class="row mt-3">
+    <!--Grid column-->
+    <div class="col-lg-12 col-md-12">
+        <!--Card-->
+        <mdb-card cascade="true" narrower="true">
+            <!--Card image-->
+            <div class="view view-cascade gradient-card-header blue-gradient">
+                <h4 class="h4-responsive">Inputs</h4>
+            </div>
+            <!--/Card image-->
+            <!--Card content-->
+            <mdb-card-body cascade="true">
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <mdb-card>
+                            <mdb-card-body>
+                                <h4 class="h4-responsive">Progress bars:</h4>
+                                <mdb-progress value="25" min="0" max="100" type="success" aria-valuenow="25"
+                                              aria-valuemin="0" aria-valuemax="100"></mdb-progress>
+                                <mdb-progress value="50" min="0" max="100" type="info" aria-valuenow="50"
+                                              aria-valuemin="0" aria-valuemax="100"></mdb-progress>
+                                <mdb-progress value="75" min="0" max="100" type="warning" aria-valuenow="75"
+                                              aria-valuemin="0" aria-valuemax="100"></mdb-progress>
+                                <mdb-progress value="100" min="0" max="100" type="danger" aria-valuenow="100"
+                                              aria-valuemin="0" aria-valuemax="100"></mdb-progress>
+                            </mdb-card-body>
+                        </mdb-card>
+
+                        <mdb-card>
+                            <mdb-card-body>
+                                <h4 class="h4-responsive">Preloaders:</h4>
+                                <mdb-progress-bar class="progress primary-color-dark"
+                                                  mode="indeterminate"></mdb-progress-bar>
+                            </mdb-card-body>
+                        </mdb-card>
+                        <mdb-card>
+                            <mdb-card-body>
+                                <h4 class="h4-responsive">Loading circle:</h4>
+
+                                <mdb-spinner spinnerType="big" spinnerColor="blue"></mdb-spinner>
+
+
+                                <mdb-spinner spinnerColor="red"></mdb-spinner>
+
+
+                                <mdb-spinner spinnerType="small" spinnerColor="yellow"></mdb-spinner>
+                            </mdb-card-body>
+                        </mdb-card>
+                        <mdb-card>
+                            <mdb-card-body>
+                                <h4 class="h4-responsive">Multicolor::</h4>
+                                <mdb-spinner spinnerType="big"></mdb-spinner>
+                            </mdb-card-body>
+                        </mdb-card>
+                        <mdb-card>
+                            <mdb-card-body>
+                                <h4 class="h4-responsive">Range picker:</h4>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <mdb-range-input min="0" max="100"></mdb-range-input>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <mdb-range-input min="0" max="100"></mdb-range-input>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <mdb-range-input min="0" max="100"></mdb-range-input>
+                                    </div>
+                                </div>
+
+
+                            </mdb-card-body>
+                        </mdb-card>
+
+                        <mdb-card>
+                            <mdb-card-body>
+                                <h4 class="h4-responsive">Autocomplete:</h4>
+
+                                <div class="md-form">
+                                    <input
+                                            type="text"
+                                            class="completer-input form-control mdb-autocomplete"
+                                            [ngModel]="searchText | async"
+                                            (ngModelChange)="searchText.next($event)"
+                                            [mdbAutoCompleter]="auto"
+                                            placeholder="Choose your color"
+                                    />
+                                    <mdb-auto-completer #auto="mdbAutoCompleter"
+                                                        textNoResults="I have found no results :(">
+                                        <mdb-option *ngFor="let option of results | async" [value]="option">
+                                            {{ option }}
+                                        </mdb-option>
+                                    </mdb-auto-completer>
+                                </div>
+                            </mdb-card-body>
+                        </mdb-card>
+
+                    </div>
+                    <div class="col-md-6">
+                        <mdb-card>
+                            <mdb-card-body>
+                                <h4 class="h4-responsive">File input:</h4>
+                                <form>
+                                    <div class="file-field">
+                                        <div mdbBtn color="primary" size="sm" class="waves-light" mdbWavesEffect>
+                                            <span>Choose file</span>
+                                            <input type="file" mdbFileSelect (uploadOutput)="onUploadOutput($event)"
+                                                   [uploadInput]="uploadInput">
+                                        </div>
+                                        <div class="file-path-wrapper">
+                                            <input class="file-path" type="text" placeholder="Upload your file"
+                                                   [value]="showFiles()">
+                                        </div>
+                                    </div>
+                                </form>
+                                <br> OR
+                                <br>
+                                <div class="card text-center align-middle" mdbFileDrop
+                                          (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput"
+                                          [ngClass]="{ 'is-drop-over': dragOver }">
+                                    <mdb-card-body>
+                                        <p>Drag & Drop files here</p>
+                                    </mdb-card-body>
+                                </div>
+                            </mdb-card-body>
+                        </mdb-card>
+                        <mdb-card>
+                            <mdb-card-body>
+                                <h4 class="h4-responsive">Textarea:</h4>
+
+                                <!--Basic textarea-->
+                                <div class="md-form">
+                                    <textarea mdbInput type="text" id="form7"
+                                              class="md-textarea">{{showFiles()}}</textarea>
+                                    <label for="form7">Basic textarea</label>
+                                </div>
+
+                                <!--Textarea with icon prefix-->
+                                <div class="md-form">
+                                    <mdb-icon fas icon="pencil-alt"></mdb-icon>
+                                    <textarea mdbInput type="text" id="form8" class="md-textarea"></textarea>
+                                    <label for="form8">Icon Prefix</label>
+                                </div>
+                            </mdb-card-body>
+                        </mdb-card>
+                        <mdb-card>
+                            <mdb-card-body>
+                                <h4 class="h4-responsive mb-2">Char counters:</h4>
+                                <div class="md-form">
+                                    <input id="input_text" type="text" length="10" mdbCharCounter mdbInput>
+                                    <label for="input_text">Input text</label>
+                                </div>
+
+                                <div class="md-form">
+                                    <textarea class="md-textarea" id="input_text" type="text" length="120"
+                                              mdbCharCounter mdbInput></textarea>
+                                    <label for="input_text">Type your text</label>
+                                </div>
+                            </mdb-card-body>
+                        </mdb-card>
+
+
+                    </div>
+                </div>
+            </mdb-card-body>
+            <!--/.Card content-->
+        </mdb-card>
+        <!--/.Card-->
+    </div>
+    <!--Grid column-->
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-md-10">
+        <!--Section: Docs link-->
+        <section class="pb-4 pt-5">
+            <panel header="Full documentation" color="primary-color">
+                <p class="card-text">Read the full documentation for these components.</p>
+                <a href="https://mdbootstrap.com/angular/components/inputs/" target="_blank"
+                   mdbBtn color="primary" class="waves-effect waves-light">Learn more</a>
+            </panel>
+        </section>
+        <!--/.Section: Docs link-->
+    </div>
+</div>

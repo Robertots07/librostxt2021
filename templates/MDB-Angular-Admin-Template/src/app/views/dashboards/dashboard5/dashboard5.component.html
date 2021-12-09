@@ -1,0 +1,259 @@
+<div class="row mb-5 mt-lg-5">
+
+        <!--First column-->
+        <div class="col-md-6 panel-title mb-5 mt-3">
+            <h4><span class="px-4 py-3 white-text z-depth-1-half light-blue lighten-1" style="
+                border-radius: 5px;">Search analitycs</span></h4>
+        </div>
+        <!--/First column-->
+    
+        <!--Second column-->
+        <div class="col-md-6 chart-settings">
+    
+            <mdb-card>
+                <mdb-card-body class="pb-1">
+    
+                    <div class="row">
+    
+                        <div class="col-lg-4 col-sm-12">
+                            <!--Date select-->
+                            <mdb-select [options]="dateOptionsSelect" placeholder="Choose time period"></mdb-select>
+                            <!--/Date select-->
+                        </div>
+                        <div class="col-lg-4 col-sm-6 px-4 datepickers">
+                            <div class="md-form mr-2">
+                                <mdb-date-picker name="mydate" [placeholder]="'From'"  required></mdb-date-picker>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 px-4 datepickers">
+                            <div class="md-form">
+                               <mdb-date-picker name="mydate" [placeholder]="'To'"  required></mdb-date-picker>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                </mdb-card-body>
+            </mdb-card>
+    
+        </div>
+        <!--/Second column-->
+    
+    </div>
+    
+    <section>
+    
+        <!--Card-->
+        <mdb-card cascade="true" narrower="true">
+    
+            <!--Card image-->
+            <div class="view view-cascade gradient-card-header blue-gradient"><iframe class="chartjs-hidden-iframe" tabindex="-1" style="display: block; overflow: hidden; border: 0px; margin: 0px; top: 0px; left: 0px; bottom: 0px; right: 0px; height: 100%; width: 100%; position: absolute; pointer-events: none; z-index: -1;"></iframe>
+                <canvas mdbChart 
+                    [chartType]="chartType"
+                    [datasets]="chartDatasets" 
+                    [labels]="chart1Labels"
+                    [options]="chartOptions"
+                    [colors]="chartColors"
+                    [legend]="true">
+                </canvas>
+            </div>
+            <!--/Card image-->
+    
+            <!--Card content-->
+            <mdb-card-body cascade="true" class="blue-panel text-center">
+    
+                <!--Second row-->
+                <div class="row mx-3 mb-0 text-center">
+                    <div class="col mt-1 mb-2">
+    
+                        <div class="btn-group flex-wrap mt-1">
+                            <label mdbBtn color="panel" class="btn-md waves-effect waves-light m-1" [(ngModel)]="checkModel1.first" mdbCheckbox mdbWavesEffect>
+                                Clicks 1000 <mdb-icon fas icon="arrow-up" class="white-text"></mdb-icon> 25%
+                            </label>
+                        
+                            <label mdbBtn color="panel" class="btn-md waves-effect waves-light m-1" [(ngModel)]="checkModel1.second" mdbCheckbox mdbWavesEffect>
+                                Impressions 1000 <mdb-icon fas icon="arrow-up" class="white-text"></mdb-icon> 25%
+                            </label>
+                        
+                            <label mdbBtn color="panel" class="btn-md waves-effect waves-light m-1" [(ngModel)]="checkModel1.third" mdbCheckbox mdbWavesEffect>
+                                CTR 5% <mdb-icon fas icon="arrow-up" class="white-text"></mdb-icon> 25%
+                            </label>
+                        
+                            <label mdbBtn color="panel" class="btn-md waves-effect waves-light m-1" [(ngModel)]="checkModel1.fourth" mdbCheckbox mdbWavesEffect>
+                                Position 4.14 <mdb-icon fas icon="arrow-up" class="white-text"></mdb-icon> 25%
+                            </label>
+                        </div>
+    
+                    </div>
+                </div>
+                <!--/Second row-->
+    
+                <!--Third row-->
+                <div class="row mx-3 mb-5 text-center">
+    
+                    <!--First column-->
+                    <div class="col">
+    
+                        <div class="btn-group flex-wrap mt-1">
+                            <label mdbBtn color="panel" class="btn-md waves-effect waves-light m-1" [(ngModel)]="checkModel2.first" mdbCheckbox mdbWavesEffect>
+                                Queries
+                            </label>
+    
+                            <label mdbBtn color="panel" class="btn-md waves-effect waves-light m-1" [(ngModel)]="checkModel2.second" mdbCheckbox mdbWavesEffect>
+                                Pages
+                            </label>
+    
+                            <label mdbBtn color="panel" class="btn-md waves-effect waves-light m-1" [(ngModel)]="checkModel2.third" mdbCheckbox mdbWavesEffect>
+                                Countries
+                            </label>
+    
+                            <label mdbBtn color="panel" class="btn-md waves-effect waves-light m-1" [(ngModel)]="checkModel2.fourth" mdbCheckbox mdbWavesEffect>
+                                Devices
+                            </label>
+    
+                            <label mdbBtn color="panel" class="btn-md waves-effect waves-light m-1" [(ngModel)]="checkModel2.fifth" mdbCheckbox mdbWavesEffect>
+                                Search type
+                            </label>
+                        </div>
+    
+                    </div>
+                    <!--/Second column-->
+    
+                </div>
+                <!--/Third row-->
+    
+                <!--Third row-->
+                <div class="row mb-0">
+                    <!--First column-->
+                    <div class="col-md-12">
+    
+                        <!--Panel content-->
+                        <mdb-card-body class="pt-0">
+                            <!--Table-->
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <!--Table head-->
+                                    <thead class="rgba-stylish-strong white-text">
+                                        <tr>
+                                            <th>Queries</th>
+                                            <th>Clicks</th>
+                                            <th>Impressions</th>
+                                            <th>CTR</th>
+                                            <th>Position</th>
+                                            <th>Day</th>
+                                            <th>Week</th>
+                                            <th>Month</th>
+                                            <th>Local</th>
+                                            <th>Global</th>
+                                        </tr>
+                                    </thead>
+                                    <!--/Table head-->
+    
+                                    <!--Table body-->
+                                    <tbody>
+                                        <tr class="none-top-border">
+                                            <td>bootstrap material design</td>
+                                            <td>1000</td>
+                                            <td>10000</td>
+                                            <td>5%</td>
+                                            <td>3.21</td>
+                                            <td>2 <mdb-badge color="green">1 <mdb-icon fas icon="arrow-circle-up"></mdb-icon></mdb-badge></td>
+                                            <td>2 <mdb-badge color="red">1 <mdb-icon fas icon="arrow-circle-down"></mdb-icon></mdb-badge></td>
+                                            <td>2 <mdb-badge color="grey">0 </mdb-badge></td>
+                                            <td>200 (US)</td>
+                                            <td>2000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>bootstrap material design</td>
+                                            <td>1000</td>
+                                            <td>10000</td>
+                                            <td>5%</td>
+                                            <td>3.21</td>
+                                            <td>2 <mdb-badge color="green">1 <mdb-icon fas icon="arrow-circle-up"></mdb-icon></mdb-badge></td>
+                                            <td>2 <mdb-badge color="red">1 <mdb-icon fas icon="arrow-circle-down"></mdb-icon></mdb-badge></td>
+                                            <td>2 <mdb-badge color="grey">0 </mdb-badge></td>
+                                            <td>200 (US)</td>
+                                            <td>2000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>bootstrap material design</td>
+                                            <td>1000</td>
+                                            <td>10000</td>
+                                            <td>5%</td>
+                                            <td>3.21</td>
+                                            <td>2 <mdb-badge color="green">1 <mdb-icon fas icon="arrow-circle-up"></mdb-icon></mdb-badge></td>
+                                            <td>2 <mdb-badge color="red">1 <mdb-icon fas icon="arrow-circle-down"></mdb-icon></mdb-badge></td>
+                                            <td>2 <mdb-badge color="grey">0 </mdb-badge></td>
+                                            <td>200 (US)</td>
+                                            <td>2000</td>
+                                        </tr>
+    
+                                    </tbody>
+                                    <!--/Table body-->
+                                </table>
+    
+                            </div>
+                            <!--/Table-->
+    
+                            <!--Bottom Table UI-->
+                            <div class="d-flex justify-content-between  flex-wrap">
+    
+                                <!--Name-->
+                                <mdb-select [options]="rowsOptionsSelect" placeholder="Rows number"></mdb-select>
+    
+                                <!--Pagination -->
+                                <nav class="my-4">
+                                    <ul class="pagination pagination-circle pg-blue mb-0">
+    
+                                        <!--First-->
+                                        <li class="page-item disabled clearfix d-none d-md-block"><a class="page-link waves-effect waves-effect">First</a></li>
+    
+                                        <!--Arrow left-->
+                                        <li class="page-item disabled">
+                                            <a class="page-link waves-effect waves-effect" aria-label="Previous">
+                                            <span aria-hidden="true">«</span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        </li>
+    
+                                        <!--Numbers-->
+                                        <li class="page-item active"><a class="page-link waves-effect waves-effect" mdbWavesEffect>1</a></li>
+                                        <li class="page-item"><a class="page-link waves-effect waves-effect" mdbWavesEffect>2</a></li>
+                                        <li class="page-item"><a class="page-link waves-effect waves-effect" mdbWavesEffect>3</a></li>
+                                        <li class="page-item"><a class="page-link waves-effect waves-effect" mdbWavesEffect>4</a></li>
+                                        <li class="page-item"><a class="page-link waves-effect waves-effect" mdbWavesEffect>5</a></li>
+    
+                                        <!--Arrow right-->
+                                        <li class="page-item">
+                                            <a class="page-link waves-effect waves-effect" mdbWavesEffect aria-label="Next">
+                                                <span aria-hidden="true">»</span>
+                                                <span class="sr-only">Next</span>
+                                            </a>
+                                        </li>
+    
+                                        <!--First-->
+                                        <li class="page-item clearfix d-none d-md-block"><a class="page-link waves-effect waves-effect" mdbWavesEffect>Last</a></li>
+    
+                                    </ul>
+                                </nav>
+                                <!--/Pagination -->
+    
+                            </div>
+                            <!--Bottom Table UI-->
+    
+                        </mdb-card-body>
+                        <!--/.Panel content-->
+    
+                    </div>
+                    <!--/First column-->
+                </div>
+                <!--/Third row-->
+    
+            </mdb-card-body>
+            <!--/.Card content-->
+    
+        </mdb-card>
+        <!--/.Card-->
+    
+    </section>
+    

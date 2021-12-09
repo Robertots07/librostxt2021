@@ -1,0 +1,614 @@
+<div class="row mt-5">
+    <div class="col-md-12">
+
+        <!--Section: Analytical panel-->
+        <section class="section text-center">
+
+            <!--Section heading-->
+            <h2 class="text-center my-5 h1 pt-4">Analytical panel </h2>
+            <!--Section description-->
+            <p class="text-center mb-5 w-responsive mx-auto">Duis aute irure dolor in reprehenderit in voluptate velit
+                esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur
+                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <!--Card-->
+            <mdb-card cascade="true" narrower="true">
+
+                <!--Section: Chart-->
+                <section>
+
+                    <!--Grid row-->
+                    <div class="row">
+
+                        <!--Grid column-->
+                        <div class="col-xl-5 col-lg-12 mr-0">
+
+                            <!--Card image-->
+                            <div class="view view-cascade gradient-card-header blue-gradient">
+                                <h2 class="h2-responsive mb-0">Sales</h2>
+                            </div>
+                            <!--/Card image-->
+
+                            <!--Card content-->
+                            <mdb-card-body class="pb-0">
+
+                                <!--Panel data-->
+                                <div class="row card-body pt-3">
+
+                                    <!--First column-->
+                                    <div class="col-md-6">
+
+                                        <!--Date select-->
+                                        <p class="lead">
+                                            <mdb-badge info="true" class="p-2">Data range</mdb-badge>
+                                        </p>
+                                        <mdb-select [options]="dateOptionsSelect"
+                                                    placeholder="Choose time period"></mdb-select>
+
+                                        <!--Date pickers-->
+                                        <p class="lead mt-5">
+                                            <mdb-badge info="true" class="p-2">Custom date</mdb-badge>
+                                        </p>
+                                        <br>
+                                        <div class="d-flex flex-column justify-content-between">
+                                            <div class="md-form px-2">
+                                                <mdb-date-picker name="mydate" [placeholder]="'Selected date'"
+                                                                 required></mdb-date-picker>
+                                                <label class="active">From</label>
+                                            </div>
+                                            <div class="md-form px-2">
+                                                <mdb-date-picker name="mydate" [placeholder]="'Selected date'"
+                                                                 required></mdb-date-picker>
+                                                <label class="active">To</label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!--/First column-->
+
+                                    <!--Second column-->
+                                    <div class="col-md-6 text-center">
+
+                                        <!--Summary-->
+                                        <p>Total sales: <strong>2000$</strong>
+                                            <button type="button" mdbBtn color="info" size="sm" class="p-2"
+                                                    placement="top"
+                                                    mdbTooltip="Total sales in the given period">
+                                                <mdb-icon fas icon="question"></mdb-icon>
+                                            </button>
+                                        </p>
+                                        <p>Average sales: <strong>100$</strong>
+                                            <button type="button" mdbBtn color="info" size="sm" class="p-2"
+                                                    placement="top"
+                                                    mdbTooltip="Average daily sales in the given period">
+                                                <mdb-icon fas icon="question"></mdb-icon>
+                                            </button>
+                                        </p>
+
+                                        <!--Change chart-->
+                                        <mdb-simple-chart [percent]="56" [barColor]="'4CAF50'"
+                                                          [animate]="{duration: 1000, enabled: true}"></mdb-simple-chart>
+                                        <h5>
+                                            <mdb-badge color="red" class="accent-2 p-2">Change
+                                                <mdb-icon fas
+                                                          icon="arrow-circle-down" class="ml-1"></mdb-icon>
+                                            </mdb-badge>
+                                            <button type="button" mdbBtn color="info" size="sm" class="p-2"
+                                                    placement="top"
+                                                    mdbTooltip="Percentage change compared to the same period in the past">
+                                                <mdb-icon fas icon="question"></mdb-icon>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <!--/Second column-->
+
+                                </div>
+                                <!--/Panel data-->
+
+                            </mdb-card-body>
+                            <!--/.Card content-->
+
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-xl-7 col-lg-12 mb-4">
+
+                            <!--Card image-->
+                            <div class="view view-cascade gradient-card-header blue-gradient">
+
+                                <canvas mdbChart
+                                        [chartType]="chart1Type"
+                                        [datasets]="chart1Datasets"
+                                        [labels]="chart1Labels"
+                                        [colors]="chart1Colors"
+                                        [options]="chart1Options"
+                                        [legend]="true">
+                                </canvas>
+
+                            </div>
+                            <!--/Card image-->
+
+                        </div>
+                        <!--Grid column-->
+
+                    </div>
+                    <!--Grid row-->
+
+                </section>
+                <!--Section: Chart-->
+
+            </mdb-card>
+            <!--/.Card-->
+
+        </section>
+        <!--Section: Analytical panel-->
+
+    </div>
+
+    <div class="col-md-12">
+
+        <!--Section: Cascading admin cards-->
+        <section class="section">
+
+            <!--Section heading-->
+            <h2 class="text-center my-5 h1 pt-4">Cascading admin cards </h2>
+            <!--Section description-->
+            <p class="text-center mb-5 w-responsive mx-auto">Duis aute irure dolor in reprehenderit in voluptate velit
+                esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur
+                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <!--Grid row-->
+            <div class="">
+                <app-stats-card class="mb-4"></app-stats-card>
+            </div>
+            <!--Grid row-->
+
+        </section>
+
+    </div>
+
+    <div class="col-md-12">
+
+        <!--Section: Cascading admin cards-->
+        <section class="section">
+
+            <!--Section heading-->
+            <h2 class="text-center my-5 h1 pt-4">Classic admin cards </h2>
+            <!--Section description-->
+            <p class="text-center mb-5 w-responsive mx-auto">Duis aute irure dolor in reprehenderit in voluptate velit
+                esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur
+                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <!--Grid row-->
+            <div class="">
+                <app-stats-card2></app-stats-card2>
+            </div>
+            <!--Grid row-->
+
+        </section>
+
+    </div>
+
+    <div class="col-md-12">
+
+        <!--Section: Cascading admin cards-->
+        <section class="section">
+
+            <!--Section heading-->
+            <h2 class="text-center my-5 h1 pt-4">Cascading admin cards </h2>
+            <!--Section description-->
+            <p class="text-center mb-5 w-responsive mx-auto">Duis aute irure dolor in reprehenderit in voluptate velit
+                esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur
+                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <!--Grid row-->
+            <div class="row">
+
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-12 mb-4">
+
+
+                    <!--Card-->
+                    <mdb-card cascade="true" narrower="true">
+
+                        <!--Card image-->
+                        <div class="view view-cascade gradient-card-header info-color">
+                            <h4 class="mb-0">Things to improve</h4>
+                        </div>
+                        <!--/Card image-->
+
+                        <!--Card content-->
+                        <mdb-card-body cascade="true" class="text-center">
+
+                            <div class="list-group list-panel">
+                                <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Cras
+                                    justo odio
+                                    <mdb-icon fas icon="wrench" class="ml-auto" placement="top"
+                                              mdbTooltip="Click to fix"></mdb-icon>
+                                </a>
+                                <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Dapibus
+                                    ac
+                                    facilisi
+                                    <mdb-icon fas icon="wrench" class="ml-auto" placement="top"
+                                              mdbTooltip="Click to fix"></mdb-icon>
+                                </a>
+                                <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Morbi
+                                    leo risus
+                                    <mdb-icon fas icon="wrench" class="ml-auto" placement="top"
+                                              mdbTooltip="Click to fix"></mdb-icon>
+                                </a>
+                                <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Porta
+                                    ac
+                                    consectet
+                                    <mdb-icon fas icon="wrench" class="ml-auto" placement="top"
+                                              mdbTooltip="Click to fix"></mdb-icon>
+                                </a>
+                                <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Vestibulum
+                                    at
+                                    eros
+                                    <mdb-icon fas icon="wrench" class="ml-auto" placement="top"
+                                              mdbTooltip="Click to fix"></mdb-icon>
+                                </a>
+                            </div>
+
+                        </mdb-card-body>
+                        <!--/.Card content-->
+
+                    </mdb-card>
+                    <!--/.Card-->
+
+
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-4">
+
+                    <!--Card-->
+                    <mdb-card cascade="true" narrower="true">
+
+                        <!--Card image-->
+                        <div class="view view-cascade gradient-card-header warning-color">
+                            <h4 class="mb-0">Tasks to do</h4>
+                        </div>
+                        <!--/Card image-->
+
+                        <!--Card content-->
+                        <mdb-card-body cascade="true" class="text-center">
+
+                            <div class="list-group list-panel">
+                                <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Cras
+                                    justo odio
+                                    <mdb-icon fas icon="wrench" class="ml-auto" placement="top"
+                                              mdbTooltip="Click to fix"></mdb-icon>
+                                </a>
+                                <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Dapibus
+                                    ac
+                                    facilisi
+                                    <mdb-icon fas icon="wrench" class="ml-auto" placement="top"
+                                              mdbTooltip="Click to fix"></mdb-icon>
+                                </a>
+                                <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Morbi
+                                    leo risus
+                                    <mdb-icon fas icon="wrench" class="ml-auto" placement="top"
+                                              mdbTooltip="Click to fix"></mdb-icon>
+                                </a>
+                                <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Porta
+                                    ac
+                                    consectet
+                                    <mdb-icon fas icon="wrench" class="ml-auto" placement="top"
+                                              mdbTooltip="Click to fix"></mdb-icon>
+                                </a>
+                                <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Vestibulum
+                                    at
+                                    eros
+                                    <mdb-icon fas icon="wrench" class="ml-auto" placement="top"
+                                              mdbTooltip="Click to fix"></mdb-icon>
+                                </a>
+                            </div>
+
+                        </mdb-card-body>
+                        <!--/.Card content-->
+
+                    </mdb-card>
+                    <!--/.Card-->
+
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-4">
+
+                    <!--Card-->
+                    <mdb-card cascade="true" narrower="true">
+
+                        <!--Card image-->
+                        <div class="view view-cascade gradient-card-header red accent-2">
+                            <h4 class="mb-0">Warnings</h4>
+                        </div>
+                        <!--/Card image-->
+
+                        <!--Card content-->
+                        <mdb-card-body cascade="true" class="text-center">
+
+                            <div class="list-group list-panel">
+                                <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Cras
+                                    justo odio
+                                    <mdb-icon fas icon="wrench" class="ml-auto" placement="top"
+                                              mdbTooltip="Click to fix"></mdb-icon>
+                                </a>
+                                <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Dapibus
+                                    ac
+                                    facilisi
+                                    <mdb-icon fas icon="wrench" class="ml-auto" placement="top"
+                                              mdbTooltip="Click to fix"></mdb-icon>
+                                </a>
+                                <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Morbi
+                                    leo risus
+                                    <mdb-icon fas icon="wrench" class="ml-auto" placement="top"
+                                              mdbTooltip="Click to fix"></mdb-icon>
+                                </a>
+                                <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Porta
+                                    ac
+                                    consectet
+                                    <mdb-icon fas icon="wrench" class="ml-auto" placement="top"
+                                              mdbTooltip="Click to fix"></mdb-icon>
+                                </a>
+                                <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Vestibulum
+                                    at
+                                    eros
+                                    <mdb-icon fas icon="wrench" class="ml-auto" placement="top"
+                                              mdbTooltip="Click to fix"></mdb-icon>
+                                </a>
+                            </div>
+
+                        </mdb-card-body>
+                        <!--/.Card content-->
+
+                    </mdb-card>
+                    <!--/.Card-->
+
+                </div>
+                <!--Grid column-->
+
+            </div>
+            <!--Grid row-->
+
+
+        </section>
+
+    </div>
+
+    <div class="col-md-12">
+        <section class="section">
+            <!--Section heading-->
+            <h2 class="text-center my-5 h1 pt-4">Recent posts</h2>
+            <!--Section description-->
+            <p class="text-center mb-5 w-responsive mx-auto">Duis aute irure dolor in reprehenderit in voluptate velit
+                esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur
+                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <!-- Grid row -->
+            <div class="row text-center">
+
+                <!-- Grid column -->
+                <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
+
+                    <!-- Featured image -->
+                    <div class="view overlay rounded z-depth-2 mb-4 waves-light" mdbWavesEffect>
+                        <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/81.jpg"
+                             alt="Sample image">
+                        <a>
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+
+                    <!-- Category -->
+                    <a href="#!" class="pink-text">
+                        <h6 class="font-weight-bold mb-3">
+                            <mdb-icon fas icon="map" class="pr-2"></mdb-icon>
+                            Adventure
+                        </h6>
+                    </a>
+                    <!-- Post title -->
+                    <h4 class="font-weight-bold mb-3"><strong>Title of the news</strong></h4>
+                    <!-- Post data -->
+                    <p>by <a class="font-weight-bold">Billy Forester</a>, 15/07/2018</p>
+                    <!-- Excerpt -->
+                    <p class="dark-grey-text">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
+                        impedit
+                        quo minus id quod maxime placeat facere possimus voluptas.</p>
+                    <!-- Read more button -->
+                    <a mdbBtn color="pink" rounded="true" mdbWavesEffect>Read more</a>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-lg-4 col-md-6 mb-md-0 mb-4">
+
+                    <!-- Featured image -->
+                    <div class="view overlay rounded z-depth-2 mb-4 waves-light" mdbWavesEffect>
+                        <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg"
+                             alt="Sample image">
+                        <a>
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+
+                    <!-- Category -->
+                    <a href="#!" class="deep-orange-text">
+                        <h6 class="font-weight-bold mb-3">
+                            <mdb-icon fas icon="graduation-cap" class="pr-2"></mdb-icon>
+                            Education
+                        </h6>
+                    </a>
+                    <!-- Post title -->
+                    <h4 class="font-weight-bold mb-3"><strong>Title of the news</strong></h4>
+                    <!-- Post data -->
+                    <p>by <a class="font-weight-bold">Billy Forester</a>, 13/07/2018</p>
+                    <!-- Excerpt -->
+                    <p class="dark-grey-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                        voluptatum deleniti atque corrupti quos dolores.</p>
+                    <!-- Read more button -->
+                    <a mdbBtn color="deep-orange" rounded="true" mdbWavesEffect>Read more</a>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-lg-4 col-md-6 mb-0">
+
+                    <!-- Featured image -->
+                    <div class="view overlay rounded z-depth-2 mb-4 waves-light" mdbWavesEffect>
+                        <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/13.jpg"
+                             alt="Sample image">
+                        <a>
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+
+                    <!-- Category -->
+                    <a href="#!" class="blue-text">
+                        <h6 class="font-weight-bold mb-3">
+                            <mdb-icon fas icon="fire" class="pr-2"></mdb-icon>
+                            Culture
+                        </h6>
+                    </a>
+                    <!-- Post title -->
+                    <h4 class="font-weight-bold mb-3"><strong>Title of the news</strong></h4>
+                    <!-- Post data -->
+                    <p>by <a class="font-weight-bold">Billy Forester</a>, 11/07/2018</p>
+                    <!-- Excerpt -->
+                    <p class="dark-grey-text">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+                        fugit, sed
+                        quia consequuntur magni dolores eos qui ratione.</p>
+                    <!-- Read more button -->
+                    <a mdbBtn color="info" rounded="true" mdbWavesEffect>Read more</a>
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </section>
+    </div>
+
+    <div class="col-md-12">
+        <section class="section">
+            <!--Section heading-->
+            <h2 class="text-center my-5 h1 pt-4">Contact form</h2>
+            <!--Section description-->
+            <p class="text-center mb-5 w-responsive mx-auto">Duis aute irure dolor in reprehenderit in voluptate velit
+                esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur
+                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <div class="row">
+
+                <!--Grid column-->
+                <div class="col-lg-5 my-4">
+
+                    <!--Form with header-->
+                    <mdb-card>
+
+                        <mdb-card-body>
+                            <!--Header-->
+                            <div class="form-header blue accent-1">
+                                <h3>
+                                    <i class="fa fa-envelope"></i> Write to us:</h3>
+                            </div>
+
+                            <p>We'll write rarely, but only the best content.</p>
+                            <br>
+
+                            <!--Body-->
+                            <div class="md-form">
+                                <mdb-icon fas icon="user" class="prefix grey-text"></mdb-icon>
+                                <input mdbInput type="text" id="form3" class="form-control">
+                                <label for="form3">Your name</label>
+                            </div>
+
+                            <div class="md-form">
+                                <mdb-icon fas icon="envelope" class="prefix grey-text"></mdb-icon>
+                                <input mdbInput type="text" id="form2" class="form-control">
+                                <label for="form2">Your email</label>
+                            </div>
+
+                            <div class="md-form">
+                                <mdb-icon fas icon="tag" class="prefix grey-text"></mdb-icon>
+                                <input mdbInput type="text" id="form32" class="form-control">
+                                <label for="form34">Subject</label>
+                            </div>
+
+                            <div class="md-form">
+                                <mdb-icon icon="pencil" class="prefix grey-text"></mdb-icon>
+                                <textarea mdbInput type="text" id="form8" class="md-textarea"></textarea>
+                                <label for="form8">Icon Prefix</label>
+                            </div>
+
+                            <div class="text-center">
+                                <button mdbBtn color="light-blue" class="waves-light" mdbWavesEffect>Submit</button>
+                            </div>
+
+                        </mdb-card-body>
+
+                    </mdb-card>
+                    <!--Form with header-->
+
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-7">
+
+                    <!--Google map-->
+                    <agm-map class="z-depth-1-half map-container" style="height: 400px;" [latitude]="map.lat"
+                             [longitude]="map.lng">
+                        <agm-marker [latitude]="map.lat" [longitude]="map.lng"></agm-marker>
+                    </agm-map>
+
+                    <br>
+                    <!--Buttons-->
+                    <div class="row text-center">
+                        <div class="col-md-4">
+                            <a mdbBtn floating="true" color="blue" class="accent-1 waves-light" mdbWavesEffect>
+                                <mdb-icon fas icon="map-marker"></mdb-icon>
+                            </a>
+                            <p>San Francisco, CA 94126</p>
+                            <p>United States</p>
+                        </div>
+
+                        <div class="col-md-4">
+                            <a mdbBtn floating="true" color="blue" class="accent-1 waves-light" mdbWavesEffect>
+                                <mdb-icon fas icon="phone"></mdb-icon>
+                            </a>
+                            <p>+ 01 234 567 89</p>
+                            <p>Mon - Fri, 8:00-22:00</p>
+                        </div>
+
+                        <div class="col-md-4">
+                            <a mdbBtn floating="true" color="blue" class="accent-1 waves-light" mdbWavesEffect>
+                                <mdb-icon fas icon="envelope"></mdb-icon>
+                            </a>
+                            <p>info@gmail.com</p>
+                            <p>sale@gmail.com</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!--Grid column-->
+
+            </div>
+        </section>
+    </div>
+
+
+</div>

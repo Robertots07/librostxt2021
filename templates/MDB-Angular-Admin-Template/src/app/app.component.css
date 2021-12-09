@@ -1,0 +1,22 @@
+:host {
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  min-height:100vh;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+:host ::ng-deep div.mydp.picker {
+  z-index: 98;
+}
+
+:host ::ng-deep .mydp.picker.picker--opened {
+  z-index: 1000;
+}
+
+:host ::ng-deep mdb-select {
+  z-index: 99;
+}

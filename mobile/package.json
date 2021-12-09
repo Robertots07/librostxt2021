@@ -1,0 +1,39 @@
+{
+  "nativescript": {
+    "id": "org.nativescript.mdbangularmobile",
+    "tns-android": {
+      "version": "6.0.2"
+    },
+    "tns-ios": {
+      "version": "6.0.2"
+    }
+  },
+  "name": "mdb-angular-mobile-free",
+  "version": "8.0.0",
+  "description": "MDB Angular Mobile Application",
+  "license": "MIT",
+  "dependencies": {
+    "@angular/animations": "~8.2.0",
+    "@angular/common": "~8.2.0",
+    "@angular/compiler": "~8.2.0",
+    "@angular/core": "~8.2.0",
+    "@angular/forms": "~8.2.0",
+    "@angular/platform-browser": "~8.2.0",
+    "@angular/platform-browser-dynamic": "~8.2.0",
+    "@angular/router": "~8.2.0",
+    "mdb-angular-mobile": "file:mdb-angular-mobile-8.0.0.tgz",
+    "nativescript-angular": "~8.2.0",
+    "nativescript-theme-core": "~1.0.6",
+    "node-sass": "^4.12.0",
+    "reflect-metadata": "~0.1.12",
+    "rxjs": "^6.4.0",
+    "tns-core-modules": "~6.0.0",
+    "zone.js": "~0.9.1"
+  },
+  "devDependencies": {
+    "@angular/compiler-cli": "~8.2.0",
+    "@ngtools/webpack": "~8.2.0",
+    "nativescript-dev-webpack": "~1.1.0",
+    "typescript": "~3.5.3"
+  }
+}

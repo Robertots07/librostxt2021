@@ -1,0 +1,172 @@
+<div class="row mt-5">
+  <div class="col-md-12">
+    <!--Card-->
+    <mdb-card cascade="true" class="mt-5">
+      <!--Card image-->
+      <div class="view view-cascade gradient-card-header blue-gradient">
+        <h4 class="h4-responsive">Sales</h4>
+      </div>
+      <!--/Card image-->
+
+      <!--Card content-->
+      <mdb-card-body cascade="true" class="text-center">
+        <div class="row">
+          <div class="col-md-12">
+            <div style="display: block">
+              <canvas
+                mdbChart
+                [chartType]="chart1Type"
+                [datasets]="chartDatasets"
+                [labels]="chart1Labels"
+                [colors]="chartColors"
+                [options]="chartOptions"
+                [legend]="true"
+              >
+              </canvas>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <!--Table-->
+            <table class="table table-sm">
+              <!--Table head-->
+              <thead class="blue-gradient">
+                <tr>
+                  <th>#</th>
+                  <th *ngFor="let h of chart1Labels">{{ h }}</th>
+                </tr>
+              </thead>
+              <!--Table head-->
+
+              <!--Table body-->
+              <tbody>
+                <tr *ngFor="let row of chartDatasets; let i = index">
+                  <th scope="row">{{ i + 1 }}</th>
+                  <td *ngFor="let col of row.data">{{ col }}</td>
+                </tr>
+              </tbody>
+              <!--Table body-->
+            </table>
+            <!--Table-->
+          </div>
+        </div>
+      </mdb-card-body>
+      <!--/.Card content-->
+    </mdb-card>
+    <!--/.Card-->
+  </div>
+</div>
+<div class="row mt-5">
+  <div class="col-md-12">
+    <!--Card-->
+    <mdb-card cascade="true" class="mt-5">
+      <!--Card image-->
+      <div class="view view-cascade gradient-card-header peach-gradient">
+        <h4 class="h4-responsive">Sales</h4>
+      </div>
+      <!--/Card image-->
+
+      <!--Card content-->
+      <mdb-card-body cascade="true" class="text-center">
+        <div class="row">
+          <div class="col-md-12">
+            <div style="display: block">
+              <canvas
+                mdbChart
+                [chartType]="chart2Type"
+                [datasets]="chartDatasets"
+                [labels]="chart1Labels"
+                [colors]="chartColors"
+                [options]="chartOptions"
+                [legend]="true"
+              >
+              </canvas>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <!--Table-->
+            <table class="table table-sm">
+              <!--Table head-->
+              <thead class="peach-gradient">
+                <tr>
+                  <th>#</th>
+                  <th *ngFor="let h of chart1Labels">{{ h }}</th>
+                </tr>
+              </thead>
+              <!--Table head-->
+
+              <!--Table body-->
+              <tbody>
+                <tr *ngFor="let row of chartDatasets; let i = index">
+                  <th scope="row">{{ i + 1 }}</th>
+                  <td *ngFor="let col of row.data">{{ col }}</td>
+                </tr>
+              </tbody>
+              <!--Table body-->
+            </table>
+            <!--Table-->
+          </div>
+        </div>
+      </mdb-card-body>
+      <!--/.Card content-->
+    </mdb-card>
+    <!--/.Card-->
+  </div>
+</div>
+
+<div class="row mt-5">
+  <div class="col-md-12">
+    <!--Card-->
+    <mdb-card cascade="true" class="mt-5">
+      <!--Card image-->
+      <div class="view view-cascade gradient-card-header aqua-gradient">
+        <h4 class="h4-responsive">Sales</h4>
+      </div>
+      <!--/Card image-->
+
+      <!--Card content-->
+      <mdb-card-body cascade="true" class="text-center">
+        <div class="row">
+          <div class="col-md-12">
+            <div style="display: block">
+              <canvas
+                mdbChart
+                [chartType]="chart3Type"
+                [datasets]="chartDatasets"
+                [labels]="chart1Labels"
+                [colors]="chartColors"
+                [options]="chartOptions"
+                [legend]="true"
+              >
+              </canvas>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <!--Table-->
+            <table class="table table-sm">
+              <!--Table head-->
+              <thead class="aqua-gradient">
+                <tr>
+                  <th>#</th>
+                  <th *ngFor="let h of chart1Labels">{{ h }}</th>
+                </tr>
+              </thead>
+              <!--Table head-->
+
+              <!--Table body-->
+              <tbody>
+                <tr *ngFor="let row of chartDatasets; let i = index">
+                  <th scope="row">{{ i + 1 }}</th>
+                  <td *ngFor="let col of row.data">{{ col }}</td>
+                </tr>
+              </tbody>
+              <!--Table body-->
+            </table>
+            <!--Table-->
+          </div>
+        </div>
+      </mdb-card-body>
+      <!--/.Card content-->
+    </mdb-card>
+    <!--/.Card-->
+  </div>
+</div>

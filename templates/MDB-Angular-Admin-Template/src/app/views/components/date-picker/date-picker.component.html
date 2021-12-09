@@ -1,0 +1,39 @@
+<div class="row mt-5">
+    <div class="col-md-12">
+        <!--Card-->
+        <mdb-card cascade="true" narrower="true" class="mt-5">
+            <!--Card image-->
+            <div class="view view-cascade gradient-card-header blue-gradient">
+                <h4 class="h4-responsive">Date picker </h4>
+            </div>
+            <!--/Card image-->
+            <!--Card content-->
+            <mdb-card-body cascade="true" class="text-center">
+                <div class="row">
+                    <div class="col-md-6 col-lg-5 mx-auto">
+                        <div class="px-5 pt-5 mb-5 pb-5 mt-5">
+                            <mdb-date-picker #datePicker name="mydate" [placeholder]="'Select date'"
+                                             [label]="'Try me...'" required></mdb-date-picker>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-10">
+                        <!--Section: Docs link-->
+                        <section class="pb-4">
+                            <panel header="Full documentation" color="primary-color">
+                                <p class="card-text">Read the full documentation for these components.</p>
+                                <a href="https://mdbootstrap.com/angular/advanced/datepicker/" target="_blank" mdbBtn
+                                   color="primary" class="waves-effect waves-light">Learn more</a>
+                            </panel>
+                        </section>
+                        <!--/.Section: Docs link-->
+                    </div>
+                </div>
+            </mdb-card-body>
+            <!--/.Card content-->
+        </mdb-card>
+        <!--/.Card-->
+    </div>
+</div>

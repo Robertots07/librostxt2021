@@ -1,0 +1,48 @@
+<div class="row mt-5">
+    <div class="col-md-12">
+        <!--Card-->
+        <mdb-card cascade="true" narrower="true" class="mt-5">
+
+            <!--Card image-->
+            <div class="view view-cascade gradient-card-header blue-gradient">
+                <h4 class="h4-responsive">Alerts </h4>
+            </div>
+            <!--/Card image-->
+
+            <!--Card content-->
+            <mdb-card-body cascade="true" class="text-center">
+                <!--Info message-->
+                <a mdbBtn color="info" class="waves-light" (click)="showInfo()" mdbWavesEffect>Info message</a>
+                <!--Warning message-->
+                <a mdbBtn color="warning" class="waves-light" (click)="showWarning()" mdbWavesEffect>Warning message</a>
+                <!--Success message-->
+                <a mdbBtn color="success" class="waves-light" (click)="showSuccess()" mdbWavesEffect>Success message</a>
+                <!--Error message-->
+                <a mdbBtn color="danger" class="waves-light" (click)="showError()" mdbWavesEffect>Error message</a>
+
+                <hr>
+
+                <h2>Placement:</h2>
+                <p>
+                    <a mdbBtn color="info" class="waves-light" (click)="showTopLeft()" mdbWavesEffect>Top left</a>
+                    <a mdbBtn color="info" class="waves-light" (click)="showTopCenter()" mdbWavesEffect>Top center</a>
+                    <a mdbBtn color="info" class="waves-light" (click)="showTopFullWidth()" mdbWavesEffect>Top full
+                        width</a>
+                    <a mdbBtn color="info" class="waves-light" (click)="showTopRight()" mdbWavesEffect>Top right</a>
+                </p>
+                <p>
+                    <a mdbBtn color="info" class="waves-light" (click)="showBottomLeft()" mdbWavesEffect>Bottom left</a>
+                    <a mdbBtn color="info" class="waves-light" (click)="showBottomCenter()" mdbWavesEffect>Bottom
+                        center</a>
+                    <a mdbBtn color="info" class="waves-light" (click)="showBottomFullWidth()" mdbWavesEffect>Bottom
+                        full width</a>
+                    <a mdbBtn color="info" class="waves-light" (click)="showBottomRight()" mdbWavesEffect>Bottom
+                        right</a>
+                </p>
+
+            </mdb-card-body>
+            <!--/.Card content-->
+        </mdb-card>
+        <!--/.Card-->
+    </div>
+</div>

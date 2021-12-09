@@ -1,0 +1,258 @@
+<!--Top Table UI-->
+<mdb-card class="my-5">
+  <mdb-card-body
+    ><!--Grid row-->
+    <div class="row">
+      <!--Grid column-->
+      <div class="col-xl-3 col-lg-6 col-md-12">
+        <mdb-select
+          [options]="bulkOptionsSelect"
+          placeholder="Bulk actions"
+        ></mdb-select>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-xl-3 col-lg-6 col-md-6">
+        <mdb-select
+          [options]="showOnlyOptionsSelect"
+          placeholder="Show only"
+        ></mdb-select>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-xl-3 col-lg-6 col-md-6">
+        <mdb-select
+          [options]="filterOptionsSelect"
+          placeholder="Filter segments"
+        ></mdb-select>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-xl-3 col-lg-6 col-md-12">
+        <form class="form-inline inputs ml-2">
+          <!--Right-->
+          <div class="md-form  input-group">
+            <input
+              class="form-control my-0 py-0"
+              type="text"
+              placeholder="Search"
+            />
+            <div class="input-group-btn">
+              <button
+                mdbBtn
+                color="primary"
+                size="sm"
+                class="ml-2 px-2 waves-effect waves-light"
+                mdbWavesEffect
+              >
+                <mdb-icon fas icon="search"></mdb-icon>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!--Grid column-->
+    </div>
+    <!--Grid row--></mdb-card-body
+  >
+</mdb-card>
+<!--Top Table UI-->
+
+<mdb-card cascade="true" narrower="true" [ngClass]="{ 'z-depth-0': !shadows }">
+  <!--Card image-->
+  <div
+    class="view view-cascade gradient-card-header blue-gradient narrower py-2 mx-4 mb-3 d-flex justify-content-between align-items-center"
+  >
+    <div>
+      <button
+        type="button"
+        mdbBtn
+        outline="true"
+        color="white"
+        rounded="true"
+        size="sm"
+        class="px-2"
+      >
+        <mdb-icon fas icon="th-large" class="mt-0"></mdb-icon>
+      </button>
+      <button
+        type="button"
+        mdbBtn
+        outline="true"
+        color="white"
+        rounded="true"
+        size="sm"
+        class="px-2"
+      >
+        <mdb-icon fas icon="columns" class="mt-0"></mdb-icon>
+      </button>
+    </div>
+
+    <a href="" class="white-text mx-3">Table name</a>
+
+    <div>
+      <button
+        type="button"
+        mdbBtn
+        outline="true"
+        color="white"
+        rounded="true"
+        size="sm"
+        class="px-2"
+      >
+        <mdb-icon fas icon="pencil-alt" class="mt-0"></mdb-icon>
+      </button>
+      <button
+        type="button"
+        mdbBtn
+        outline="true"
+        color="white"
+        rounded="true"
+        size="sm"
+        class="px-2"
+      >
+        <mdb-icon fas icon="times" class="mt-0"></mdb-icon>
+      </button>
+      <button
+        type="button"
+        mdbBtn
+        outline="true"
+        color="white"
+        rounded="true"
+        size="sm"
+        class="px-2"
+      >
+        <mdb-icon fas icon="info-circle" class="mt-0"></mdb-icon>
+      </button>
+    </div>
+  </div>
+  <!--/Card image-->
+
+  <div class="px-4">
+    <div class="table-wrapper">
+      <!--Table-->
+      <table class="table table-hover mb-0">
+        <!--Table head-->
+        <thead>
+          <tr>
+            <th>
+              <mdb-checkbox></mdb-checkbox>
+            </th>
+            <th class="th-lg">
+              <a (click)="sortBy('first')"
+                >First Name
+                <mdb-icon fas icon="sort" class="ml-1"></mdb-icon>
+              </a>
+            </th>
+            <th class="th-lg">
+              <a (click)="sortBy('last')"
+                >Last Name
+                <mdb-icon fas icon="sort" class="ml-1"></mdb-icon>
+              </a>
+            </th>
+            <th class="th-lg">
+              <a (click)="sortBy('username')"
+                >Username
+                <mdb-icon fas icon="sort" class="ml-1"></mdb-icon>
+              </a>
+            </th>
+            <th class="th-lg">
+              <a (click)="sortBy('email')"
+                >Email
+                <mdb-icon fas icon="sort" class="ml-1"></mdb-icon>
+              </a>
+            </th>
+            <th class="th-lg">
+              <a (click)="sortBy('country')"
+                >Country
+                <mdb-icon fas icon="sort" class="ml-1"></mdb-icon>
+              </a>
+            </th>
+            <th class="th-lg">
+              <a (click)="sortBy('city')"
+                >City
+                <mdb-icon fas icon="sort" class="ml-1"></mdb-icon>
+              </a>
+            </th>
+          </tr>
+        </thead>
+        <!--Table head-->
+
+        <!--Table body-->
+        <tbody>
+          <tr *ngFor="let row of tableData">
+            <th scope="row">
+              <mdb-checkbox></mdb-checkbox>
+            </th>
+            <td>{{ row.first }}</td>
+            <td>{{ row.last }}</td>
+            <td>{{ row.username }}</td>
+            <td>{{ row.email }}</td>
+            <td>{{ row.country }}</td>
+            <td>{{ row.city }}</td>
+          </tr>
+        </tbody>
+        <!--Table body-->
+      </table>
+      <!--Table-->
+    </div>
+
+    <hr class="my-0" />
+
+    <!--Bottom Table UI-->
+    <div class="d-flex justify-content-between">
+      <!--Pagination -->
+      <nav class="my-4">
+        <ul class="pagination pagination-circle pg-blue mb-0 flex-wrap">
+          <!--First-->
+          <li class="page-item disabled">
+            <a class="page-link">First</a>
+          </li>
+
+          <!--Arrow left-->
+          <li class="page-item disabled">
+            <a class="page-link" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+              <span class="sr-only">Previous</span>
+            </a>
+          </li>
+
+          <!--Numbers-->
+          <li class="page-item active">
+            <a class="page-link  waves-effect" mdbWavesEffect>1</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link  waves-effect" mdbWavesEffect>2</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link  waves-effect" mdbWavesEffect>3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link  waves-effect" mdbWavesEffect>4</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link  waves-effect" mdbWavesEffect>5</a>
+          </li>
+
+          <!--Arrow right-->
+          <li class="page-item">
+            <a class="page-link waves-effect" mdbWavesEffect aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+              <span class="sr-only">Next</span>
+            </a>
+          </li>
+
+          <!--First-->
+          <li class="page-item">
+            <a class="page-link waves-effect" mdbWavesEffect>Last</a>
+          </li>
+        </ul>
+      </nav>
+      <!--/Pagination -->
+    </div>
+    <!--Bottom Table UI-->
+  </div>
+</mdb-card>

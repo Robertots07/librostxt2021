@@ -1,0 +1,22 @@
+<div class="page-wrapper" [ngClass]="{'toggled' : getSideBarState()}">
+    <app-sidebar></app-sidebar>
+    <main class="page-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="form-group col-md-12">
+                    <a mdbBtn floating="true" size="lg" gradient="purple">
+                        <mdb-icon fas icon="bars" (click)="toggleSidebar()" size="2x" class=" "></mdb-icon>
+                    </a>
+
+                    <a mdbBtn floating="true" size="lg" gradient="purple" [routerLink]="['/home']">
+                        <mdb-icon fas icon="home" size="2x"></mdb-icon>
+                    </a>
+                    <app-gallery-filter></app-gallery-filter>
+                </div>
+
+            </div>
+        </div>
+        <div class="overlay" (click)="toggleSidebar()" [ngClass]="{'show' : !getSideBarState()}"></div>
+    </main>
+
+</div>

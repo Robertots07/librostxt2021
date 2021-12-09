@@ -1,0 +1,25 @@
+$introBg: 'http://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img%20(11).jpg';
+
+.intro-2 {
+  background: url($introBg) no-repeat center center;
+  background-size: cover;
+}
+
+.md-form label {
+  color: #ffffff;
+}
+
+.intro {
+  min-height: 100vh;
+  position: relative;
+}
+
+.rgba-stylish-strong .mask {
+  background-color: rgba(62, 69, 81, 0.7);
+}
+
+.view {
+  .mask {
+    overflow-y: hidden;
+  }
+}

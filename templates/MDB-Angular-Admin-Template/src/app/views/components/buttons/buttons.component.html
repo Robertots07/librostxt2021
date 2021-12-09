@@ -1,0 +1,478 @@
+<h2 class="font-bold mt-lg-5 mb-5 pb-4">
+    <strong>Buttons</strong>
+</h2>
+
+<!--Section: Basic buttons-->
+<section class="mb-5 pb-4 flex-wrap">
+    <h4 class="mb-4 dark-grey-text font-bold">
+        <strong>Basic buttons</strong>
+    </h4>
+
+    <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+    <button type="button" mdbBtn color="primary" class="waves-light" mdbWavesEffect>Primary</button>
+    <!-- Default button -->
+    <button type="button" mdbBtn color="default" class="waves-light" mdbWavesEffect>Default</button>
+    <!-- Secondary button -->
+    <button type="button" mdbBtn color="secondary" class="waves-light" mdbWavesEffect>Secondary</button>
+    <!-- Indicates a successful or positive action -->
+    <button type="button" mdbBtn color="success" class="waves-light" mdbWavesEffect>Success</button>
+    <!-- Contextual button for informational alert messages -->
+    <button type="button" mdbBtn color="info" class="waves-light" mdbWavesEffect>Info</button>
+    <!-- Indicates caution should be taken with this action -->
+    <button type="button" mdbBtn color="warning" class="waves-light" mdbWavesEffect>Warning</button>
+    <!-- Indicates a dangerous or potentially negative action -->
+    <button type="button" mdbBtn color="danger" class="waves-light" mdbWavesEffect>Danger</button>
+
+</section>
+<!--Section: Basic buttons-->
+
+<!--Section: Outline buttons-->
+<section class="mb-5 pb-4">
+    <h4 class="mb-4 dark-grey-text font-bold">
+        <strong>Outline buttons</strong>
+    </h4>
+
+    <button type="button" mdbBtn outline="true" color="primary" mdbWavesEffect>Primary</button>
+    <button type="button" mdbBtn outline="true" color="default" mdbWavesEffect>Default</button>
+    <button type="button" mdbBtn outline="true" color="secondary" mdbWavesEffect>Secondary</button>
+    <button type="button" mdbBtn outline="true" color="success" mdbWavesEffect>Success</button>
+    <button type="button" mdbBtn outline="true" color="info" mdbWavesEffect>Info</button>
+    <button type="button" mdbBtn outline="true" color="warning" mdbWavesEffect>Warning</button>
+    <button type="button" mdbBtn outline="true" color="danger" mdbWavesEffect>Danger</button>
+
+
+</section>
+<!--Section: Outline buttons-->
+
+<!--Section: Additional buttons-->
+<section class="mb-5 pb-4">
+    <h4 class="mb-4 dark-grey-text font-bold">
+        <strong>Additional buttons</strong>
+    </h4>
+
+    <!--Elegant-->
+    <button type="button" mdbBtn color="elegant" class="btn btn-elegant waves-light" mdbWavesEffect>Elegant</button>
+    <!--Unique-->
+    <button type="button" mdbBtn color="unique" class="waves-light" mdbWavesEffect>Unique</button>
+    <!--Pink-->
+    <button type="button" mdbBtn color="pink" class="waves-light" mdbWavesEffect>Pink</button>
+    <!--Purple-->
+    <button type="button" mdbBtn color="purple" class="waves-light" mdbWavesEffect>Purple</button>
+    <!--Deep-purple-->
+    <button type="button" mdbBtn color="deep-purple" class="waves-light" mdbWavesEffect>Deep-purple</button>
+    <!--Indigo-->
+    <button type="button" mdbBtn color="indigo" class="waves-light" mdbWavesEffect>Indigo</button>
+    <!--Light blue-->
+    <button type="button" mdbBtn color="light-blue" class="waves-light" mdbWavesEffect>Light blue</button>
+    <!--Cyan-->
+    <button type="button" mdbBtn color="cyan" class="waves-light" mdbWavesEffect>Cyan</button>
+    <!--Dark-green-->
+    <button type="button" mdbBtn color="dark-green" class="waves-light" mdbWavesEffect>Dark-green</button>
+    <!--Light-green-->
+    <button type="button" mdbBtn color="light-green" class="waves-light" mdbWavesEffect>Light-green</button>
+    <!--Yellow-->
+    <button type="button" mdbBtn color="yellow" class="waves-light" mdbWavesEffect>Yellow</button>
+    <!--Amber-->
+    <button type="button" mdbBtn color="amber" class="waves-light" mdbWavesEffect>Amber</button>
+    <!--Deep-orange-->
+    <button type="button" mdbBtn color="deep-orange" class="waves-light" mdbWavesEffect>Deep-orange</button>
+    <!--Brown-->
+    <button type="button" mdbBtn color="brown" class="waves-light" mdbWavesEffect>Brown</button>
+
+</section>
+<!--Section: Additional buttons-->
+
+<!--Section: Gradient buttons-->
+
+    <div class="row">
+        <div class="col-md-6 col-xl-5 mb-5 pb-4">
+            <h4 class="mb-4 dark-grey-text font-bold">
+                <strong>Gradient buttons</strong>
+            </h4>
+
+            <button mdbBtn gradient="peach" rounded="true" class="waves-light" mdbWavesEffect>Peach</button>
+            <button mdbBtn gradient="purple" rounded="true" class="waves-light" mdbWavesEffect>Purple</button>
+            <button mdbBtn gradient="blue" rounded="true" class="waves-light" mdbWavesEffect>Blue</button>
+            <button mdbBtn gradient="aqua" rounded="true" class="waves-light" mdbWavesEffect>Aqua</button>
+            <h4 class="mb-4 dark-grey-text font-bol mt-2">
+                <strong>Floating buttons </strong>
+            </h4>
+
+            <a mdbBtn floating="true" size="lg" gradient="purple" class="waves-light" mdbWavesEffect>
+                <mdb-icon fas icon="bolt"></mdb-icon>
+            </a>
+            <a mdbBtn floating="true" gradient="peach"  class="waves-light" mdbWavesEffect>
+                <mdb-icon fas icon="leaf"></mdb-icon>
+            </a>
+            <a mdbBtn floating="true" size="sm" gradient="blue"  class="waves-light" mdbWavesEffect>
+                <mdb-icon fas icon="star"></mdb-icon>
+            </a>
+        </div>
+
+        <div class="col-md-6 col-xl-5 mb-5 pb-4">
+            <h4 class="mb-4 dark-grey-text font-bold">
+                <strong>Radio buttons</strong>
+            </h4>
+            <div class="btn-group flex-wrap">
+                <label mdbBtn color="primary" class="waves-light m-1" [(ngModel)]="radioModel" mdbRadio="Left" mdbWavesEffect>
+                    Radio 1 (preselected)
+                </label>
+                <label mdbBtn color="primary"  class="waves-light m-1" [(ngModel)]="radioModel" mdbRadio="Middle" mdbWavesEffect>
+                    Radio 2
+                </label>
+                <label mdbBtn color="primary"  class="waves-light m-1" [(ngModel)]="radioModel" mdbRadio="Right" mdbWavesEffect>
+                    Radio 3
+                </label>
+            </div>
+            <h4 class="mb-4 dark-grey-text font-bold mt-2">
+                <strong>Checkbox buttons</strong>
+            </h4>
+
+            <div class="btn-group flex-wrap">
+                <label mdbBtn color="primary"  class="waves-light m-1" [(ngModel)]="checkModel.left" mdbCheckbox mdbWavesEffect>
+                    Checkbox 1 (pre-checked)
+                </label>
+                <label mdbBtn color="primary"  class="waves-light m-1" [(ngModel)]="checkModel.middle" mdbCheckbox mdbWavesEffect>
+                    Checkbox 2
+                </label>
+                <label mdbBtn color="primary"  class="waves-light m-1" [(ngModel)]="checkModel.right" mdbCheckbox mdbWavesEffect>
+                    Checkbox 3
+                </label>
+            </div>
+
+        </div>
+    </div>
+
+<!--Section: Gradient buttons-->
+
+<!--Section: Style and size-->
+
+    <div class="row">
+        <div class="col-md-6 col-xl-5 mb-5 pb-4">
+            <h4 class="mb-4 dark-grey-text font-bold">
+                <strong>Style</strong>
+            </h4>
+
+            <button mdbBtn color="secondary" mdbWavesEffect>Default</button>
+            <button mdbBtn color="secondary" rounded="true" mdbWavesEffect>Round</button>
+            <button mdbBtn color="secondary" rounded="true" mdbWavesEffect>
+                <mdb-icon far icon="heart" class="mr-2"></mdb-icon> With icon</button>
+            <a mdbBtn floating="true" color="secondary" mdbWavesEffect>
+                <mdb-icon fas icon="leaf"></mdb-icon>
+            </a>
+
+        </div>
+
+        <div class="col-md-6 col-xl-5 mb-5 pb-4">
+            <h4 class="mb-4 dark-grey-text font-bold">
+                <strong>Sizes</strong>
+            </h4>
+
+            <button type="button" mdbBtn color="primary" size="lg" mdbWavesEffect>Large button</button>
+            <button type="button" mdbBtn color="primary" mdbWavesEffect>Regular button</button>
+            <button type="button" mdbBtn color="primary" size="sm" mdbWavesEffect>Small button</button>
+
+        </div>
+    </div>
+
+
+<!--Section: Style and size-->
+
+<!--Section: Social buttons-->
+
+    <div class="row">
+        <div class="col-md-3 col-xl-2 mb-5 pb-4">
+            <h4 class="mb-4 dark-grey-text font-bold">
+                <strong>Regular</strong>
+            </h4>
+
+            <!--Facebook-->
+            <button type="button" mdbBtn color="fb" mdbWavesEffect>
+                <mdb-icon fab icon="facebook-f" class="left"></mdb-icon> Facebook</button>
+            <!--Twitter-->
+            <button type="button" mdbBtn color="tw" mdbWavesEffect>
+                <mdb-icon fab icon="twitter"></mdb-icon> Twitter</button>
+            <!--Google +-->
+            <button type="button" mdbBtn color="gplus" mdbWavesEffect>
+                <mdb-icon fab icon="google-plus-g" class="eft"></mdb-icon> Google +</button>
+            <!--Linkedin-->
+            <button type="button" mdbBtn color="li" mdbWavesEffect>
+                <mdb-icon fab icon="linkedin-in" class="left"></mdb-icon> Linkedin</button>
+            <!--Instagram-->
+            <button type="button" mdbBtn color="ins" mdbWavesEffect>
+                <mdb-icon fab icon="instagram" class="left"></mdb-icon> Instagram</button>
+            <!--Pinterest-->
+            <button type="button" mdbBtn color="pin" mdbWavesEffect>
+                <mdb-icon fab icon="pinterest-p" class="left"></mdb-icon> Pinterest</button>
+            <!--Youtube-->
+            <button type="button" mdbBtn color="yt" mdbWavesEffect>
+                <mdb-icon fab icon="youtube" class="left"></mdb-icon> Youtube</button>
+            <!--Dribbble-->
+            <button type="button" mdbBtn color="dribbble" mdbWavesEffect>
+                <mdb-icon fab icon="dribbble" class="left"></mdb-icon> Dribbble</button>
+            <!--Vkontakte-->
+            <button type="button" mdbBtn color="vk" mdbWavesEffect>
+                <mdb-icon fab icon="vk" class="left"></mdb-icon> Vkontakte</button>
+            <!--Stack Overflow-->
+            <button type="button" mdbBtn color="so" class="px-4" mdbWavesEffect>
+                <mdb-icon fab icon="stack-overflow" class="left"></mdb-icon> Stack Overflow</button>
+            <!--Slack-->
+            <button type="button" mdbBtn color="slack" mdbWavesEffect>
+                <mdb-icon fab icon="slack" class="left"></mdb-icon> Slack</button>
+            <!--Comments-->
+            <button type="button" mdbBtn color="comm" mdbWavesEffect>
+                <mdb-icon far icon="comments" class="left"></mdb-icon> Comments</button>
+            <!--Github-->
+            <button type="button" mdbBtn color="git" mdbWavesEffect>
+                <mdb-icon fab icon="github" class="left"></mdb-icon> Github</button>
+            <!--Email-->
+            <button type="button" mdbBtn color="email" mdbWavesEffect>
+                <mdb-icon far icon="envelope" class="left"></mdb-icon> Email</button>
+
+        </div>
+
+        <div class="col-md-2 col-xl-1 mb-5 pb-4">
+            <h4 class="mb-4 dark-grey-text font-bold">
+                <strong>Simple</strong>
+            </h4>
+
+            <!--Facebook-->
+            <button type="button" mdbBtn color="fb" mdbWavesEffect>
+                <mdb-icon fab icon="facebook-f"></mdb-icon>
+            </button>
+            <!--Twitter-->
+            <button type="button" mdbBtn color="tw" mdbWavesEffect>
+                <mdb-icon fab icon="twitter"></mdb-icon>
+            </button>
+            <!--Google +-->
+            <button type="button" mdbBtn color="gplus" mdbWavesEffect>
+                <mdb-icon fab icon="google-plus-g"></mdb-icon>
+            </button>
+            <!--Linkedin-->
+            <button type="button" mdbBtn color="li" mdbWavesEffect>
+                <mdb-icon fab icon="linkedin-in"></mdb-icon>
+            </button>
+            <!--Instagram-->
+            <button type="button" mdbBtn color="ins" mdbWavesEffect>
+                <mdb-icon fab icon="instagram"></mdb-icon>
+            </button>
+            <!--Pinterest-->
+            <button type="button" mdbBtn color="pin" mdbWavesEffect>
+                <mdb-icon fab icon="pinterest-p"></mdb-icon>
+            </button>
+            <!--Youtube-->
+            <button type="button" mdbBtn color="yt" mdbWavesEffect>
+                <mdb-icon fab icon="youtube"></mdb-icon>
+            </button>
+            <!--Dribbble-->
+            <button type="button" mdbBtn color="dribbble" mdbWavesEffect>
+                <mdb-icon fab icon="dribbble" class="left"></mdb-icon>
+            </button>
+            <!--Vkontakte-->
+            <button type="button" mdbBtn color="vk" mdbWavesEffect>
+                <mdb-icon fab icon="vk"></mdb-icon>
+            </button>
+            <!--Stack Overflow-->
+            <button type="button" mdbBtn color="so" mdbWavesEffect>
+                <mdb-icon fab icon="stack-overflow"></mdb-icon>
+            </button>
+            <!--Slack-->
+            <button type="button" mdbBtn color="slack" mdbWavesEffect>
+                <mdb-icon fab icon="slack"></mdb-icon>
+            </button>
+            <!--Comments-->
+            <button type="button" mdbBtn color="comm" mdbWavesEffect>
+                <mdb-icon far icon="comments"></mdb-icon>
+            </button>
+            <!--Github-->
+            <button type="button" mdbBtn color="git" mdbWavesEffect>
+                <mdb-icon fab icon="github"></mdb-icon>
+            </button>
+            <!--Email-->
+            <button type="button" mdbBtn color="email" mdbWavesEffect>
+                <mdb-icon far icon="envelope"></mdb-icon>
+            </button>
+
+        </div>
+
+
+        <div class="col-md-4 col-xl-2 mb-5 pb-4">
+            <h4 class="mb-4 dark-grey-text font-bold">
+                <strong>With counters</strong>
+            </h4>
+
+            <!--Facebook-->
+            <button type="button" mdbBtn color="fb" mdbWavesEffect>
+                <mdb-icon fab icon="facebook-f" class="left"></mdb-icon>
+                <span>Facebook</span>
+            </button>
+            <span class="counter">22</span>
+
+            <!--Twitter-->
+            <button type="button" mdbBtn color="tw" mdbWavesEffect>
+                <mdb-icon fab icon="twitter"></mdb-icon>
+                <span>Twitter</span>
+            </button>
+            <span class="counter">22</span>
+
+            <!--Google +-->
+            <button type="button" mdbBtn color="gplus" mdbWavesEffect>
+                <mdb-icon fab icon="google-plus-g" class="left"></mdb-icon>
+                <span>Google+</span>
+            </button>
+            <span class="counter">22</span>
+
+            <!--Linkedin-->
+            <button type="button" mdbBtn color="li" mdbWavesEffect>
+                <mdb-icon fab icon="linkedin-in" class="left"></mdb-icon>
+                <span>Linkedin</span>
+            </button>
+            <span class="counter">22</span>
+
+            <!--Instagram-->
+            <button type="button" mdbBtn color="ins" mdbWavesEffect>
+                <mdb-icon fab icon="instagram" class="left"></mdb-icon>
+                <span>Instagram</span>
+            </button>
+            <span class="counter">22</span>
+
+            <!--Pinterest-->
+            <button type="button" mdbBtn color="pin" mdbWavesEffect>
+                <mdb-icon fab icon="pinterest-p" class="left"></mdb-icon>
+                <span>Pinterest</span>
+            </button>
+            <span class="counter">22</span>
+
+            <!--Youtube-->
+            <button type="button" mdbBtn color="yt" mdbWavesEffect>
+                <mdb-icon fab icon="youtube" class="left"></mdb-icon>
+                <span>Youtube</span>
+            </button>
+            <span class="counter">22</span>
+
+            <!--Dribbble-->
+            <button type="button"  mdbBtn color="dribbble" mdbWavesEffect>
+                <mdb-icon fab icon="dribbble" class="left"></mdb-icon>
+                <span>Dribbble</span>
+            </button>
+            <span class="counter">22</span>
+
+            <!--Vkontakte-->
+            <button type="button" mdbBtn color="vk" mdbWavesEffect>
+                <mdb-icon fab icon="vk" class="left"></mdb-icon>
+                <span>Vkontakte</span>
+            </button>
+            <span class="counter">22</span>
+
+            <!--Stack Overflow-->
+            <button type="button" mdbBtn color="so" class="px-4" mdbWavesEffect>
+                <mdb-icon fab icon="stack-overflow" class="left"></mdb-icon>
+                <span>Stack Overflow</span>
+            </button>
+            <span class="counter">22</span>
+
+            <!--Slack-->
+            <button type="button" mdbBtn color="slack" mdbWavesEffect>
+                <mdb-icon fab icon="slack" class="left"></mdb-icon>
+                <span>Slack</span>
+            </button>
+            <span class="counter">22</span>
+
+            <!--Comments-->
+            <button type="button" mdbBtn color="comm" mdbWavesEffect>
+                <mdb-icon far icon="comments" class="left"></mdb-icon>
+                <span>Comments</span>
+            </button>
+            <span class="counter">22</span>
+
+            <!--Github-->
+            <button type="button" mdbBtn color="git" mdbWavesEffect>
+                <mdb-icon fab icon="github" class="left"></mdb-icon>
+                <span>Github</span>
+            </button>
+            <span class="counter">22</span>
+
+            <!--Emails-->
+            <button type="button" mdbBtn color="email" mdbWavesEffect>
+                <mdb-icon fab icon="envelope" class="left"></mdb-icon>
+                <span>Emails</span>
+            </button>
+            <span class="counter">22</span>
+
+        </div>
+
+        <div class="col-md-3 col-xl-1 mb-5 pb-4">
+            <h4 class="mb-4 dark-grey-text font-bold">
+                <strong>Round</strong>
+            </h4>
+
+            <!--Facebook-->
+            <a type="button" mdbBtn floating="true" color="fb" mdbWavesEffect>
+                <mdb-icon fab icon="facebook-f"></mdb-icon>
+            </a>
+            <!--Twitter-->
+            <a type="button" mdbBtn floating="true" color="tw" mdbWavesEffect>
+                <mdb-icon fab icon="twitter"></mdb-icon>
+            </a>
+            <!--Google +-->
+            <a type="button" mdbBtn floating="true" color="gplus" mdbWavesEffect>
+                <mdb-icon fab icon="google-plus-g"></mdb-icon>
+            </a>
+            <!--Linkedin-->
+            <a type="button" mdbBtn floating="true" color="li" mdbWavesEffect>
+                <mdb-icon fab icon="linkedin-in"></mdb-icon>
+            </a>
+            <!--Instagram-->
+            <a type="button" mdbBtn floating="true" color="ins" mdbWavesEffect>
+                <mdb-icon fab icon="instagram"></mdb-icon>
+            </a>
+            <!--Pinterest-->
+            <a type="button" mdbBtn floating="true" color="pin" mdbWavesEffect>
+                <mdb-icon fab icon="pinterest-p"></mdb-icon>
+            </a>
+            <!--Youtube-->
+            <a type="button" mdbBtn floating="true" color="yt" mdbWavesEffect>
+                <mdb-icon fab icon="youtube"></mdb-icon>
+            </a>
+            <!--Dribbble-->
+            <a type="button" mdbBtn floating="true" color="dribbble" mdbWavesEffect>
+                <mdb-icon fab icon="dribbble"></mdb-icon>
+            </a>
+            <!--Vkontakte-->
+            <a type="button" mdbBtn floating="true" color="vk" mdbWavesEffect>
+                <mdb-icon fab icon="vk"></mdb-icon>
+            </a>
+            <!--Stack Overflow-->
+            <a type="button" mdbBtn floating="true" color="so" mdbWavesEffect>
+                <mdb-icon fab icon="stack-overflow"></mdb-icon>
+            </a>
+            <!--Slack-->
+            <a type="button" mdbBtn floating="true" color="slack" mdbWavesEffect>
+                <mdb-icon fab icon="slack"></mdb-icon>
+            </a>
+            <!--Github-->
+            <a type="button" mdbBtn floating="true" color="git" mdbWavesEffect>
+                <mdb-icon fab icon="github"></mdb-icon>
+            </a>
+            <!--Comments-->
+            <a type="button" mdbBtn floating="true" color="comm" mdbWavesEffect>
+                <mdb-icon far icon="comments"></mdb-icon>
+            </a>
+            <!--Email-->
+            <a type="button" mdbBtn floating="true" color="email" mdbWavesEffect>
+                <mdb-icon far icon="envelope"></mdb-icon>
+            </a>
+
+        </div>
+
+    </div>
+
+<!--Section: social buttons-->
+<!--Section: Dics link-->
+<section class="pb-4">
+    <panel header="Full documentation" color="primary-color">
+        <p class="card-text">Read the full documentation for these components.</p>
+        <a href="https://mdbootstrap.com/angular/components/buttons/" target="_blank" class="btn btn-primary waves-effect waves-light">Learn more</a>
+    </panel>
+</section>
+<!--/.Section: Dics link-->

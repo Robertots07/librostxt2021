@@ -1,0 +1,335 @@
+<section class="mb-5">
+
+    <!--Card-->
+    <mdb-card cascade="true" narrower="true">
+
+        <!--Section: Chart-->
+        <section>
+
+            <!--Grid row-->
+            <div class="row mb-4">
+
+                <!--Grid column-->
+                <div class="col-xl-5 col-md-12 mr-0">
+
+                    <!--Card image-->
+                    <div class="view view-cascade gradient-card-header blue-gradient">
+                        <h2 class="h2-responsive mb-0">Visitors by country</h2>
+                    </div>
+                    <!--/Card image-->
+
+                    <!--Card content-->
+                    <mdb-card-body class="pb-0">
+
+                        <!--Panel data-->
+                        <mdb-card-body cascade="true" class="pt-2">
+
+                            <table class="table no-header">
+                                <tbody>
+                                <tr>
+                                    <td><img src="assets/img/flags/us.png" class="flag mr-2"> United States</td>
+                                    <td>307</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="assets/img/flags/in.png" class="flag mr-2"> India</td>
+                                    <td>504</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="assets/img/flags/cn.png" class="flag mr-2"> China</td>
+                                    <td>613</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="assets/img/flags/pl.png" class="flag mr-2"> Poland</td>
+                                    <td>208</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="assets/img/flags/it.png" class="flag mr-2"> Italy</td>
+                                    <td>314</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <button mdbBtn flat="true" rounded="true" class="waves-effect float-right dark-grey-text"
+                                    mdbWavesEffect>full report
+                            </button>
+
+                        </mdb-card-body>
+                        <!--/Panel data-->
+
+                    </mdb-card-body>
+                    <!--/.Card content-->
+
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-xl-7 col-md-12 my-5">
+
+                    <!--Card image-->
+                    <div class="view view-cascade gradient-card-header white">
+                        <agm-map [latitude]="map.lat" [longitude]="map.lng" style="height: 420px">
+                            <agm-marker [latitude]="map.lat" [longitude]="map.lng"></agm-marker>
+                        </agm-map>
+                    </div>
+                    <!--/Card image-->
+
+                </div>
+                <!--Grid column-->
+
+            </div>
+            <!--Grid row-->
+
+            <!--Second row-->
+            <div class="row mb-0">
+                <!--First column-->
+                <div class="col-md-12">
+                    <mdb-card cascade="true" class="z-depth-0">
+                        <mdb-card-body cascade="true" class="pt-0">
+
+                            <div class="table-responsive">
+
+                                <!--Table-->
+                                <table class="table table-hover">
+                                    <!--Table head-->
+                                    <thead>
+                                    <tr class="rgba-stylish-strong white-text">
+                                        <th>Campaign name</th>
+                                        <th>Source</th>
+                                        <th>Conversion rate</th>
+                                        <th>Invested</th>
+                                    </tr>
+                                    </thead>
+                                    <!--/Table head-->
+
+                                    <!--Table body-->
+                                    <tbody>
+                                    <tr class="none-top-border">
+                                        <td>Newsletter</td>
+                                        <td>Newsletter</td>
+                                        <td>5%</td>
+                                        <td>100$</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Facebook</td>
+                                        <td>Facebook</td>
+                                        <td>5%</td>
+                                        <td>100$</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Adwords</td>
+                                        <td>Adwords</td>
+                                        <td>5%</td>
+                                        <td>100$</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sponsored post</td>
+                                        <td>Sponsored post</td>
+                                        <td>5%</td>
+                                        <td>100$</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Newsletter 2</td>
+                                        <td>Newsletter 2</td>
+                                        <td>5%</td>
+                                        <td>100$</td>
+                                    </tr>
+                                    </tbody>
+                                    <!--/Table body-->
+                                </table>
+                                <!--/Table-->
+
+                            </div>
+
+                        </mdb-card-body>
+                        <!--/.Panel content--></mdb-card>
+
+                </div>
+                <!--/First column-->
+            </div>
+            <!--/Second row-->
+
+        </section>
+        <!--Section: Chart-->
+
+    </mdb-card>
+    <!--/.Card-->
+
+</section>
+
+<section class="mb-5">
+
+    <!--Grid row-->
+    <div class="row">
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-12 my-5">
+
+
+            <!--Card-->
+            <mdb-card cascade="true" class="narrower">
+
+                <!--Card image-->
+                <div class="view view-cascade gradient-card-header mdb-color lighten-4">
+                    <canvas mdbChart
+                            height="197"
+                            width="394"
+                            [chartType]="chart1Type"
+                            [data]="chart1Datasets"
+                            [labels]="chartLabels"
+                            [options]="chart1Options"
+                            [legend]="true"
+                            [colors]="chart1Colors">
+                    </canvas>
+                </div>
+                <!--/Card image-->
+
+                <!--Card content-->
+                <mdb-card-body cascade="true" class="text-center">
+
+                    <div class="list-group list-panel">
+                        <a class="list-group-item d-flex justify-content-between dark-grey-text">Cras justo odio
+                            <mdb-icon fas icon="wrench" class="ml-auto" mdbTooltip="Click to fix"
+                                      placement="top"></mdb-icon>
+                        </a>
+                        <a class="list-group-item d-flex justify-content-between dark-grey-text">Dapibus ac facilisi
+                            <mdb-icon fas icon="wrench" class="ml-auto" mdbTooltip="Click to fix"
+                                      placement="top"></mdb-icon>
+                        </a>
+                        <a class="list-group-item d-flex justify-content-between dark-grey-text">Morbi leo risus
+                            <mdb-icon fas icon="wrench" class="ml-auto" mdbTooltip="Click to fix"
+                                      placement="top"></mdb-icon>
+                        </a>
+                        <a class="list-group-item d-flex justify-content-between dark-grey-text">Porta ac consectet
+                            <mdb-icon fas icon="wrench" class="ml-auto" mdbTooltip="Click to fix"
+                                      placement="top"></mdb-icon>
+                        </a>
+                        <a class="list-group-item d-flex justify-content-between dark-grey-text">Vestibulum at eros
+                            <mdb-icon fas icon="wrench" class="ml-auto" mdbTooltip="Click to fix"
+                                      placement="top"></mdb-icon>
+                        </a>
+                    </div>
+
+                </mdb-card-body>
+                <!--/.Card content-->
+
+            </mdb-card>
+            <!--/.Card-->
+
+
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-12 my-5">
+
+            <!--Card-->
+            <mdb-card cascade="true" class="narrower">
+
+                <!--Card image-->
+                <div class="view view-cascade gradient-card-header blue-gradient">
+                    <canvas mdbChart
+                            height="197"
+                            width="394"
+                            [chartType]="chart2Type"
+                            [datasets]="chart2Datasets"
+                            [labels]="chartLabels"
+                            [options]="chart2Options"
+                            [legend]="true"
+                            [colors]="chart2Colors">
+                    </canvas>
+                </div>
+                <!--/Card image-->
+
+                <!--Card content-->
+                <mdb-card-body cascade="true" class="text-center">
+
+                    <div class="list-group list-panel">
+                        <a class="list-group-item d-flex justify-content-between dark-grey-text">Cras justo odio
+                            <mdb-icon fas icon="wrench" class="ml-auto" mdbTooltip="Click to fix"
+                                      placement="top"></mdb-icon>
+                        </a>
+                        <a class="list-group-item d-flex justify-content-between dark-grey-text">Dapibus ac facilisi
+                            <mdb-icon fas icon="wrench" class="ml-auto" mdbTooltip="Click to fix"
+                                      placement="top"></mdb-icon>
+                        </a>
+                        <a class="list-group-item d-flex justify-content-between dark-grey-text">Morbi leo risus
+                            <mdb-icon fas icon="wrench" class="ml-auto" mdbTooltip="Click to fix"
+                                      placement="top"></mdb-icon>
+                        </a>
+                        <a class="list-group-item d-flex justify-content-between dark-grey-text">Porta ac consectet
+                            <mdb-icon fas icon="wrench" class="ml-auto" mdbTooltip="Click to fix"
+                                      placement="top"></mdb-icon>
+                        </a>
+                        <a class="list-group-item d-flex justify-content-between dark-grey-text">Vestibulum at eros
+                            <mdb-icon fas icon="wrench" class="ml-auto" mdbTooltip="Click to fix"
+                                      placement="top"></mdb-icon>
+                        </a>
+                    </div>
+
+                </mdb-card-body>
+                <!--/.Card content-->
+            </mdb-card>
+
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-12 my-5">
+
+            <!--Card-->
+            <mdb-card cascade="true" class="narrower">
+
+                <!--Card image-->
+                <div class="view view-cascade gradient-card-header indigo">
+                    <canvas mdbChart
+                            height="197"
+                            width="394"
+                            [chartType]="chart3Type"
+                            [datasets]="chart3Datasets"
+                            [labels]="chartLabels"
+                            [options]="chart1Options"
+                            [legend]="true"
+                            [colors]="chart3Colors">
+                    </canvas>
+                </div>
+                <!--/Card image-->
+
+                <!--Card content-->
+                <mdb-card-body cascade="true" class="card-body card-body-cascade text-center">
+
+                    <div class="list-group list-panel">
+                        <a class="list-group-item d-flex justify-content-between dark-grey-text">Cras justo odio
+                            <mdb-icon fas icon="wrench" class="ml-auto" mdbTooltip="Click to fix"
+                                      placement="top"></mdb-icon>
+                        </a>
+                        <a class="list-group-item d-flex justify-content-between dark-grey-text">Dapibus ac facilisi
+                            <mdb-icon fas icon="wrench" class="ml-auto" mdbTooltip="Click to fix"
+                                      placement="top"></mdb-icon>
+                        </a>
+                        <a class="list-group-item d-flex justify-content-between dark-grey-text">Morbi leo risus
+                            <mdb-icon fas icon="wrench" class="ml-auto" mdbTooltip="Click to fix"
+                                      placement="top"></mdb-icon>
+                        </a>
+                        <a class="list-group-item d-flex justify-content-between dark-grey-text">Porta ac consectet
+                            <mdb-icon fas icon="wrench" class="ml-auto" mdbTooltip="Click to fix"
+                                      placement="top"></mdb-icon>
+                        </a>
+                        <a class="list-group-item d-flex justify-content-between dark-grey-text">Vestibulum at eros
+                            <mdb-icon fas icon="wrench" class="ml-auto" mdbTooltip="Click to fix"
+                                      placement="top"></mdb-icon>
+                        </a>
+                    </div>
+
+                </mdb-card-body>
+                <!--/.Card content-->
+
+            </mdb-card>
+            <!--/.Card-->
+
+        </div>
+        <!--Grid column-->
+
+    </div>
+    <!--Grid row-->
+
+</section>

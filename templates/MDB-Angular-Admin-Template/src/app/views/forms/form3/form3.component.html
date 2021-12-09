@@ -1,0 +1,53 @@
+<div class="row mt-5">
+  <div class="col-md-12">
+    <!--Card-->
+    <mdb-card cascade="true" narrower="true" class="mt-5">
+      <!--Card image-->
+      <div class="view view-cascade gradient-card-header blue-gradient">
+        <h4 class="h4-responsive">Validations </h4>
+      </div>
+      <!--/Card image-->
+      <!--Card content-->
+      <mdb-card-body cascade="true" class="text-center">
+        <h4 class="h4-responsive">Error & Success messages </h4>
+
+
+        <div class="row justify-content-center">
+          <div class="col-md-6 text-center">
+
+            <form [formGroup]="validatingForm" class="form-inline mt-3 d-flex justify-content-between">
+              <div class="md-form">
+                <input mdbInput mdbValidate type="email" id="form8" class="form-control" formControlName="email">
+                <label for="form8">Email validator</label>
+                <mdb-error *ngIf="input?.invalid && (input?.dirty || input?.touched)">Input invalid</mdb-error>
+                <mdb-success *ngIf="input?.valid && (input?.dirty || input?.touched)">Input valid</mdb-success>
+              </div>
+
+              <div class="md-form">
+                <input mdbInput mdbValidate type="password" id="form1" class="form-control" formControlName="required">
+                <label for="form1">Required (password) validator</label>
+                <mdb-error *ngIf="input2?.invalid && (input2?.dirty || input2?.touched)">Input invalid</mdb-error>
+                <mdb-success *ngIf="input2?.valid && (input2?.dirty || input2?.touched)">Input valid</mdb-success>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </mdb-card-body>
+      <!--/.Card content-->
+    </mdb-card>
+    <!--/.Card-->
+  </div>
+</div>
+<div class="row justify-content-center">
+  <div class="col-md-10">
+    <!--Section: Docs link-->
+    <section class="pb-4 pt-5">
+      <panel header="Full documentation" color="primary-color">
+        <p class="card-text">Read the full documentation for these components.</p>
+        <a href="https://mdbootstrap.com/angular/components/forms/" target="_blank" class="btn btn-primary waves-effect waves-light">Learn more</a>
+      </panel>
+    </section>
+    <!--/.Section: Docs link-->
+  </div>
+</div>

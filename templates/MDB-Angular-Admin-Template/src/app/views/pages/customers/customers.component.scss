@@ -1,0 +1,27 @@
+.profile-card {
+  margin-top: 100px; }
+  .profile-card .avatar {
+    max-width: 150px;
+    max-height: 150px;
+    margin: -70px auto 0;
+    border-radius: 50%;
+    overflow: hidden; }
+  .profile-card p {
+    font-weight: 300; }
+
+ul.striped li {
+    padding: 0.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+strong {
+    font-weight: bolder;
+}
+
+.font-bold {
+    font-weight: 500;
+}
+
+.card .card-body h3 {
+    font-weight: 400;
+}
