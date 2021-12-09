@@ -7,8 +7,8 @@ import {scaleDownFromLeft, scaleDownFromBottom,scaleDownFromTop } from 'ngx-rout
   templateUrl: './app.component.html',
   animations: [
     trigger('scaleDownFromLeft', [
-      transition ('libros => home', useAnimation (scaleDownFromBottom),
-        )
+      //transition ('home => libros', useAnimation (scaleDownFromBottom),),
+      transition ('libros => home', useAnimation (scaleDownFromBottom),)
     ])
   ],
   styleUrls: ['./app.component.scss']
