@@ -8,7 +8,7 @@ export class SidebarService {
   _hasBackgroundImage = true;
   menus = [
     {
-      title: 'Niveles',
+      title: 'Perfil',
       type: 'header'
     },
     {

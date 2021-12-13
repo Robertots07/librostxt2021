@@ -7,7 +7,7 @@ const routes: Routes = [
 
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent, data: { state: 'home' } },
-  { path: 'libros', component: LibrosComponent, data: { state: 'libros' } },
+  { path: 'libros/:nivel', component: LibrosComponent, data: { state: 'libros' } },
   { path: '**', component: HomeComponent }
   
 

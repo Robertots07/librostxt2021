@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { SidebarService } from './sidebar.service';
+import { ActivatedRoute } from '@angular/router';
 // import { MenusService } from './menus.service';
 
 @Component({
@@ -16,12 +17,19 @@ import { SidebarService } from './sidebar.service';
   ]
 })
 export class SidebarComponent implements OnInit {
+  nivel: string;
   menus = [];
-  constructor(public sidebarservice: SidebarService) {
+  constructor(public sidebarservice: SidebarService, private router: ActivatedRoute) {
     this.menus = sidebarservice.getMenuList();
+    this.router.params.subscribe(
+      parametros => {
+        this.nivel= parametros.nivel;
+      }
+    );
    }
 
   ngOnInit() {
+    console.log(this.nivel);
   }
 
   getSideBarState() {
