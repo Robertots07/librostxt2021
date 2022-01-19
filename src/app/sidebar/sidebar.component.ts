@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { SidebarService } from './sidebar.service';
-import { ActivatedRoute } from '@angular/router';
-// import { MenusService } from './menus.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ContenidoService } from '../services/contenido.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -18,18 +18,30 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SidebarComponent implements OnInit {
   nivel: string;
+  perfil: string;
+  grado: number;
   menus = [];
-  constructor(public sidebarservice: SidebarService, private router: ActivatedRoute) {
-    this.menus = sidebarservice.getMenuList();
+  valores:any;
+  
+  constructor(public sidebarservice: SidebarService, private router: ActivatedRoute, private Ruta: Router, public ContenidoService: ContenidoService) {
     this.router.params.subscribe(
       parametros => {
         this.nivel= parametros.nivel;
+        this.perfil= parametros.perfil;
+        this.grado= parametros.grado;
+        
       }
     );
    }
 
   ngOnInit() {
-    console.log(this.nivel);
+    
+    
+    //Servicio de sidebar
+    this.sidebarservice.infommenus(this.nivel).subscribe((data: any[]) => {
+      this.menus = data;
+       //console.log(data);
+    });
   }
 
   getSideBarState() {
@@ -63,4 +75,15 @@ export class SidebarComponent implements OnInit {
     return this.sidebarservice.hasBackgroundImage;
   }
 
+  oupen(ruta){
+    this.valores = ruta.split("/");
+    console.log(this.valores);
+    this.ContenidoService.infocontenido(this.valores[0],this.valores[1],this.valores[2]).subscribe((data: any[]) => {
+      //se guarda en el localstorage de usuario convirtiendolo en string
+      localStorage.setItem('dat',JSON.stringify(data));
+      self.top.location.href = '/libros/'+ruta;
+    });
+    
+    
+  }
 }

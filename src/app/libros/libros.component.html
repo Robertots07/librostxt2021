@@ -1,4 +1,5 @@
 <div class="page-wrapper" [ngClass]="{'toggled' : getSideBarState()}">
+    <!-- menu lateral dinamico-->
     <app-sidebar></app-sidebar>
     <main class="page-content">
         <div class="container-fluid">
@@ -11,6 +12,7 @@
                     <a mdbBtn floating="true" size="lg" gradient="purple" [routerLink]="['/home']">
                         <mdb-icon fas icon="home" size="2x"></mdb-icon>
                     </a>
+                    <!-- contenido dinamico-->
                     <app-gallery-filter></app-gallery-filter>
                 </div>
 

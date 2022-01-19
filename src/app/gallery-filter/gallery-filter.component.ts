@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-gallery-filter',
@@ -6,27 +9,56 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./gallery-filter.component.scss']
 })
 export class GalleryFilterComponent implements OnInit {
-  galleryItems = [
-    {tag: 'nature', imgSrc: 'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(30).jpg'},
-    {tag: 'architecture', imgSrc: 'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(1).jpg'},
-    {tag: 'food', imgSrc: 'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(42).jpg'},
-    {tag: 'architecture', imgSrc: 'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(2).jpg'},
-    {tag: 'nature', imgSrc: 'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(114).jpg'},
-    {tag: 'architecture', imgSrc: 'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(4).jpg'},
-    {tag: 'architecture', imgSrc: 'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(6).jpg'},
-    {tag: 'nature', imgSrc: 'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(115).jpg'},
-    {tag: 'food', imgSrc: 'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(44).jpg'},
-    {tag: 'architecture', imgSrc: 'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(5).jpg'},
-    {tag: 'food', imgSrc: 'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(45).jpg'},
-    {tag: 'food', imgSrc: 'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(46).jpg'},
-    {tag: 'food', imgSrc: 'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(47).jpg'},
-    {tag: 'nature', imgSrc: 'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(111).jpg'},
-    {tag: 'architecture', imgSrc: 'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(3).jpg'},
-    {tag: 'nature', imgSrc: 'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(112).jpg'}
-    ];
-  constructor() { }
+  nivel: string;
+  perfil: string;
+  grado: number;
+  Itemslib = [];
+  Catlib = [];
+  val = false;
+  
+  constructor(private router: ActivatedRoute) {
 
-  ngOnInit(): void {
+    this.router.params.subscribe(
+      parametros => {
+        this.nivel= parametros.nivel;
+        this.perfil= parametros.perfil;
+        this.grado= parametros.grado;
+        
+      }
+    );  
   }
+  
+  ngOnInit(): void {
+    
+    if(this.perfil != 'inicio'){
+      //se recupera el string del localstorage y se convierte a json
+      this.Itemslib = JSON.parse( localStorage.getItem('dat'));
+      //se elimina el locastorage
+      localStorage.clear();
+      for(var i = 0; i < this.Itemslib.length; i++){
+        if(this.Catlib.length > 0){
+          this.val = encontrar(this.Itemslib[i].tag, this.Catlib );
+          if( !this.val ){
+            this.Catlib.push ( {tag:this.Itemslib[i].tag} );
+            this.val = false;
+          }
+        }else{
+          this.Catlib.push ( {tag:this.Itemslib[i].tag} );
+        }
+      };
+  
+      function encontrar( dat:string, Catlib2:Array<any>){
+        for(var j = 0; j < Catlib2.length; j++){
+          if(dat === Catlib2[j].tag){
+            return true;
+          }
+        }
+  
+      }
+      
+    }
+
+    }
+
 
 }
