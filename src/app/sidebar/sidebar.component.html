@@ -16,7 +16,9 @@
                         <div *ngIf="menu.type === 'dropdown'" class="sidebar-submenu" [@slide]="getState(menu)">
                             <ul>
                                 <li *ngFor="let submenu of menu.submenus">
-                                    <a (click)="oupen(submenu.ruta)"> Grado {{submenu.id_grado}}
+                                    <a (click)="oupen(submenu.ruta)"> Grado 
+                                        <span *ngIf="submenu.id_grado == 0" >Único</span> 
+                                        <span *ngIf="submenu.id_grado != 0" >{{submenu.id_grado}}</span>
                                         <span *ngIf="submenu.badge" class="badge badge-pill" [ngClass]="submenu.badge.class">{{submenu.badge.text}}</span>
                                     </a>
                                 </li>

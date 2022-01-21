@@ -16,7 +16,8 @@ export class SidebarService {
     const authData = {
       "nivel": nivel
     };
-    return this.http.post('http://192.168.68.101/21-librostxt2021/menu.php',authData); 
+    //return this.http.post('http://192.168.68.101/21-librostxt2021/menu.php',authData); 
+    return this.http.post('https://librosdetexto.sep.gob.mx/php/menu.php',authData); 
   }
 
   toggle() {

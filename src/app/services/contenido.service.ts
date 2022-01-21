@@ -14,7 +14,8 @@ export class ContenidoService {
       "perfil": perfil,
       "grado": grado
     };
-    return this.http.post('http://192.168.68.101/21-librostxt2021/contenido.php',authData); 
+    //return this.http.post('http://192.168.68.101/21-librostxt2021/contenido.php',authData);
+    return this.http.post('https://librosdetexto.sep.gob.mx/php/contenido.php',authData); 
   }
 
 }

@@ -28,6 +28,8 @@ import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { GalleryFilterComponent } from './gallery-filter/gallery-filter.component';
 
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
@@ -63,7 +65,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     MdbFilterModule
     
   ],
-  providers: [MDBSpinningPreloader,
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy},MDBSpinningPreloader,
     {
       provide: PERFECT_SCROLLBAR_CONFIG,
       useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG

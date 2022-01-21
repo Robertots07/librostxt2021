@@ -41,6 +41,7 @@ export class LibrosComponent implements OnInit {
         
       }
     );
+    console.log(this.nivel, this.perfil, this.grado);
    }
   toggleSidebar() {
     this.sidebarservice.setSidebarState(!this.sidebarservice.getSidebarState());

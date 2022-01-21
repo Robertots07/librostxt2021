@@ -1,24 +1,24 @@
-<div  *ngIf="perfil ==='inicio'">
-    <img class="img-fluid" src="/assets/img/flecha.gif" alt="Selecciona" width="50%" >
+<div *ngIf="perfil ==='inicio'">
+    <img class="img-fluid" src="./assets/img/flecha.gif" alt="Selecciona" width="50%">
 </div>
 <div *ngIf="perfil !=='inicio'">
-    <mdb-filter >
+    <mdb-filter>
         <div class="filter-nav d-flex flex-center mb-4">
             <button mdbBtn color="success" class="active" [mdbFilter]="''">All</button>
             <span *ngFor="let item of Catlib; let i = index">
                 <button mdbBtn color="primary" [mdbFilter]="item.tag">{{item.tag}}</button>
             </span>
         </div>
-    
+
         <mdb-filter-content>
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 my-1 mb-3" mdbFilter *ngFor="let item of Itemslib">
                         <mdb-filter-item class="item" [mdbFilterItem]="item.tag" [animationClass]="['animated', 'zoomIn', 'faster']">
-    
+
                             <!--Card-->
                             <mdb-card cascade="true" wider="true">
-    
+
                                 <!--Card image-->
                                 <div class="view view-cascade overlay waves-light" mdbWavesEffect>
                                     <mdb-card-img [src]="item.urlimg"></mdb-card-img>
@@ -27,22 +27,22 @@
                                     </a>
                                 </div>
                                 <!--/Card image-->
-    
+
                                 <mdb-card-body cascade="true" class="text-center pb-0" style="border-radius: 0 0 3.25rem 0.25rem!important;">
                                     <!--Card content-->
                                     <mdb-card-text>
                                         <a mdbBtn type="button" color="info" outline="true" mdbWavesEffect *ngIf="item.urllibro" href="{{item.urllibro}}" target="blank">Ver</a>
                                         <a mdbBtn type="button" color="default" size="lg" mdbWavesEffect *ngIf="item.urlpdf" href="{{item.urlpdf}}" target="blank">Descargar</a>
-    
+
                                     </mdb-card-text>
-    
-    
+
+
                                 </mdb-card-body>
                                 <!--/.Card content-->
-    
-    
-    
-    
+
+
+
+
                             </mdb-card>
                             <!--/.Card-->
                         </mdb-filter-item>

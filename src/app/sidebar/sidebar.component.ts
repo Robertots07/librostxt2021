@@ -77,11 +77,15 @@ export class SidebarComponent implements OnInit {
 
   oupen(ruta){
     this.valores = ruta.split("/");
-    console.log(this.valores);
+    //console.log(this.valores);
     this.ContenidoService.infocontenido(this.valores[0],this.valores[1],this.valores[2]).subscribe((data: any[]) => {
       //se guarda en el localstorage de usuario convirtiendolo en string
       localStorage.setItem('dat',JSON.stringify(data));
-      self.top.location.href = '/libros/'+ruta;
+      self.top.location.href = './#/libros/'+ruta;
+      setTimeout(() => {
+        location.reload();
+       }, 1);
+      
     });
     
     
