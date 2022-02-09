@@ -3,10 +3,10 @@
 </div>
 <div *ngIf="perfil !=='inicio'">
     <mdb-filter>
-        <div class="filter-nav d-flex flex-center mb-4">
-            <button mdbBtn color="success" class="active" [mdbFilter]="''">All</button>
+        <div class="filter-nav text-center mb-4">
+            <button mdbBtn size="sm" color="success" class="active" [mdbFilter]="''">All</button>
             <span *ngFor="let item of Catlib; let i = index">
-                <button mdbBtn color="primary" [mdbFilter]="item.tag">{{item.tag}}</button>
+                <button mdbBtn size="sm" color="primary" [mdbFilter]="item.tag" class="">{{item.tag}}</button>
             </span>
         </div>
 
